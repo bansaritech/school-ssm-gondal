@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shree Saraswati Shishu Mandir, Gondal</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
+    <style>
+        /* Additional styling for carousel animation */
+        .carousel-item {
+            display: none;
+        }
+        .carousel-item.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans" id="app">
+
+    <div class="container mx-auto px-4 py-8">
+        <!-- Language Selection Dropdown -->
+        <div class="mb-6">
+            <div class="relative inline-block text-left">
+                <div>
+                    <button type="button" class="inline-flex justify-between w-full rounded-lg border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500" @click="toggleDropdown">
+                        Language
+                        <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06 0L10 10.348l3.71-3.14a.75.75 0 111.04 1.08l-4.25 3.5a.75.75 0 01-1.04 0l-4.25-3.5a.75.75 0 010-1.08z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div v-if="isDropdownOpen" class="absolute right-0 z-10 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                    <div class="py-1">
+                        <button @click="selectLanguage('English')" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left">English</button>
+                        <button @click="selectLanguage('हिंदी')" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left">हिंदी</button>
+                        <button @click="selectLanguage('ગુજરાતી')" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left">ગુજરાતી</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activity Carousel -->
+        <div class="relative w-full overflow-hidden rounded-lg shadow-lg mb-8">
+            <div class="carousel">
+                <img v-for="(slide, index) in slides" :key="index" :src="slide.image" :alt="slide.alt" :class="['carousel-item w-full h-64 object-cover rounded-lg', { 'active': currentSlide === index }]" />
+            </div>
+
+            <!-- Button Container for Centering -->
+            <div class="absolute top-1/2 transform -translate-y-1/2 w-full flex justify-between">
+                <button @click="showPrevSlide" class="bg-gray-800 text-white px-4 py-2 opacity-75 rounded-r-lg hover:opacity-100">❮</button>
+                <button @click="showNextSlide" class="bg-gray-800 text-white px-4 py-2 opacity-75 rounded-l-lg hover:opacity-100">❯</button>
+            </div>
+
+            <!-- Dots Indicator -->
+            <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+                <span v-for="(dot, index) in slides" @click="goToSlide(index)" class="dot h-3 w-3 bg-gray-300 bg-opacity-50 rounded-full cursor-pointer" :class="{ 'bg-blue-500': currentSlide === index }"></span>
+            </div>
+        </div>
+
+        <!-- Student Achievements Section -->
+        <section class="mb-8 p-6 bg-white rounded-lg shadow-lg">
+            <h2 class="text-2xl font-semibold mb-4 text-blue-600">Student Achievements</h2>
+            <ul class="list-disc pl-5 space-y-2">
+                <li class="border-b pb-2">First place in the inter-school science fair.</li>
+                <li class="border-b pb-2">Winner of the state-level basketball championship.</li>
+                <li class="border-b pb-2">National-level participant in the spelling bee competition.</li>
+                <li class="border-b pb-2">Art exhibition winner for the "Young Artists" category.</li>
+                <li>Top scorer in the mathematics Olympiad.</li>
+            </ul>
+        </section>
+
+        <!-- Parents Feedback Section -->
+        <section class="p-6 bg-white rounded-lg shadow-lg">
+            <h2 class="text-2xl font-semibold mb-4 text-blue-600">Parents Feedback</h2>
+            <div class="space-y-4">
+                <blockquote class="border-l-4 border-blue-500 pl-4 italic text-gray-700 bg-gray-100 p-4 rounded-md">
+                    "The school has provided our child with a wonderful learning environment that encourages growth and curiosity."
+                    <footer class="text-right text-gray-600">— Mr. & Mrs. Sharma</footer>
+                </blockquote>
+                <blockquote class="border-l-4 border-blue-500 pl-4 italic text-gray-700 bg-gray-100 p-4 rounded-md">
+                    "We appreciate the dedication of the teachers and the range of activities offered to the students."
+                    <footer class="text-right text-gray-600">— Mrs. Gupta</footer>
+                </blockquote>
+                <blockquote class="border-l-4 border-blue-500 pl-4 italic text-gray-700 bg-gray-100 p-4 rounded-md">
+                    "The school has excellent facilities and a great support system for students and parents alike."
+                    <footer class="text-right text-gray-600">— Mr. Patel</footer>
+                </blockquote>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const { createApp, ref, onMounted } = Vue;
+
+        createApp({
+            setup() {
+                const isDropdownOpen = ref(false);
+                const currentSlide = ref(0);
+                const slides = ref([
+                    { image: "unsplash.jpg", alt: "Activity 1" },
+                    { image: "unsplash2.jpg", alt: "Activity 2" },
+                    { image: "unsplash.jpg", alt: "Activity 3" },
+                    { image: "unsplash2.jpg", alt: "Activity 4" }
+                ]);
+
+                const toggleDropdown = () => {
+                    isDropdownOpen.value = !isDropdownOpen.value;
+                };
+
+                const selectLanguage = (language) => {
+                    console.log(`Selected language: ${language}`);
+                    isDropdownOpen.value = false; // Close dropdown after selection
+                };
+
+                const showNextSlide = () => {
+                    currentSlide.value = (currentSlide.value + 1) % slides.value.length;
+                };
+
+                const showPrevSlide = () => {
+                    currentSlide.value = (currentSlide.value - 1 + slides.value.length) % slides.value.length;
+                };
+
+                const goToSlide = (index) => {
+                    currentSlide.value = index;
+                };
+
+                onMounted(() => {
+                    // Automatically change slides every 3 seconds
+                    setInterval(showNextSlide, 3000);
+                });
+
+                return {
+                    isDropdownOpen,
+                    currentSlide,
+                    slides,
+                    toggleDropdown,
+                    selectLanguage,
+                    showNextSlide,
+                    showPrevSlide,
+                    goToSlide
+                };
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
