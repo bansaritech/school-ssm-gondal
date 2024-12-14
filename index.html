@@ -1,241 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shree Saraswati Shishu Mandir, Gondal</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-    <style>
-      /* Additional styling for carousel animation */
-      .carousel-item {
-          display: none;
-      }
-      .carousel-item.active {
-          display: block;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shree Saraswati Shishu Mandir, Gondal</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue-i18n@next"></script>
+
+  <style>
+    /* Additional styling for carousel animation */
+    .carousel-item {
+      display: none;
+    }
+
+    .carousel-item.active {
+      display: block;
+    }
   </style>
 
-  </head>
-<body class="bg-gray-100 font-sans">
-    <div class="container mx-auto px-4 pt-6">
-        <!-- Header with Logo and School Name -->
-        <header class="flex items-center justify-between pb-4 border-gray-300">
-            <div class="flex items-center space-x-4">
-                <img src="https://upload.wikimedia.org/wikipedia/en/0/01/Vidyabharti.png" alt="School Logo" class="w-12 h-12">
-                <h1 class="text-2xl md:text-3xl font-bold text-blue-700">Shree Saraswati Shishu Mandir, Gondal</h1>
-            </div>
-            <!-- Language Selector -->
-            <div class="mb-6">
-              <div class="relative inline-block text-left">
-                  <div>
-                      <button type="button" class="inline-flex justify-between w-full rounded-lg border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500" id="options-menu" aria-haspopup="true" aria-expanded="true">
-                          Language
-                          <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06 0L10 10.348l3.71-3.14a.75.75 0 111.04 1.08l-4.25 3.5a.75.75 0 01-1.04 0l-4.25-3.5a.75.75 0 010-1.08z" clip-rule="evenodd" />
-                          </svg>
-                      </button>
-                  </div>
+</head>
 
-                  <div class="absolute right-0 z-10 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-                      <div class="py-1" role="none">
-                          <button class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left" role="menuitem">English</button>
-                          <button class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left" role="menuitem">हिंदी</button>
-                          <button class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left" role="menuitem">ગુજરાતી</button>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          </header>
+<body class="bg-gray-100 font-sans" id="app">
+  <div class="container mx-auto px-4 pt-6">
+    <!-- Header with Logo and School Name -->
+    <header class="flex items-center justify-between pb-4 border-gray-300">
+      <div class="flex items-center space-x-4">
+        <img src="https://upload.wikimedia.org/wikipedia/en/0/01/Vidyabharti.png" alt="School Logo" class="w-12 h-12">
+        <h1 class="text-2xl md:text-3xl font-bold text-blue-700">{{ $t('school')}}, Gondal</h1>
       </div>
-        <!-- Navigation Menu -->
-        <nav class="bg-blue-600 mt-4 shadow-md">
-            <ul class="flex justify-center space-x-6 py-4">
-                <li><a href="#home" class="text-white font-semibold hover:text-blue-300">Home</a></li>
-                <li><a href="#about-us" class="text-white font-semibold hover:text-blue-300">About Us</a></li>
-                <li><a href="#academics" class="text-white font-semibold hover:text-blue-300">Academics</a></li>
-                <li><a href="#beyond-academics" class="text-white font-semibold hover:text-blue-300">Beyond Academics</a></li>
-                <li><a href="#results" class="text-white font-semibold hover:text-blue-300">Results</a></li>
-                <li><a href="#eluminies" class="text-white font-semibold hover:text-blue-300">Eluminies</a></li>
-                <li><a href="#contact-us" class="text-white font-semibold hover:text-blue-300">Contact Us</a></li>
-            </ul>
-        </nav>
+      <!-- Language Selector -->
+      <div class="flex mb-6">
+        <div class="relative inline-block text-left">
+          <div>
+            <button type="button"
+              class="inline-flex justify-between w-full rounded-lg border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500"
+              id="options-menu" @click="toggleDropdown" aria-haspopup="true" aria-expanded="true">
+              Language
+              <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06 0L10 10.348l3.71-3.14a.75.75 0 111.04 1.08l-4.25 3.5a.75.75 0 01-1.04 0l-4.25-3.5a.75.75 0 010-1.08z"
+                  clip-rule="evenodd" />
+              </svg>
+            </button>
+          </div>
 
-        <!-- Carousel for Activity Photos -->
-        <!-- Activity Carousel -->
-        <div class="">
-          <!-- Activity Carousel -->
-          <div class="relative w-full overflow-hidden shadow-lg">
-              <div class="carousel">
-                  <img src="unsplash.jpg" alt="Activity 1" class="carousel-item active w-full h-64 object-cover">
-                  <img src="unsplash2.jpg" alt="Activity 2" class="carousel-item w-full h-64 object-cover">
-                  <img src="unsplash.jpg" alt="Activity 3" class="carousel-item w-full h-64 object-cover">
-                  <img src="unsplash2.jpg" alt="Activity 4" class="carousel-item w-full h-64 object-cover">
-              </div>
-
-              <div class="absolute top-1/2 transform -translate-y-1/2 w-full flex justify-between">
-                <button onclick="showPrevSlide()" class="bg-gray-800 text-white px-4 py-2 opacity-75 rounded-r-lg hover:opacity-100">❮</button>
-                <button onclick="showNextSlide()" class="bg-gray-800 text-white px-4 py-2 opacity-75 rounded-l-lg hover:opacity-100">❯</button>
+          <div v-if="isDropdownOpen"
+            class="absolute right-0 z-10 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+            role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+            <div class="py-1" role="none">
+              <button @click="changeLanguage('en')"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
+                role="menuitem">English</button>
+              <button @click="changeLanguage('hi')"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
+                role="menuitem">हिंदी</button>
+              <button @click="changeLanguage('gu')"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
+                role="menuitem">ગુજરાતી</button>
             </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+  <div>
+    <!-- Navigation Menu -->
+    <nav class="bg-blue-600 mt-4 shadow-md">
+      <ul class="flex justify-center space-x-3 py-3">
+        <li><a href="#home"
+            class="text-white font-semibold py-2 px-3 hover:text-blue-600 hover:bg-blue-100 hover:shadow-inner rounded-lg">Home</a>
+        </li>
+        <li><a href="#about-us"
+            class="text-white font-semibold py-2 px-3 hover:text-blue-600 hover:bg-blue-100 hover:shadow-inner rounded-lg">About
+            Us</a>
+        </li>
+        <li><a href="#academics"
+            class="text-white font-semibold py-2 px-3 hover:text-blue-600 hover:bg-blue-100 hover:shadow-inner rounded-lg">Academics</a>
+        </li>
+        <li><a href="#beyond-academics"
+            class="text-white font-semibold py-2 px-3 hover:text-blue-600 hover:bg-blue-100 hover:shadow-inner rounded-lg">Beyond
+            Academics</a></li>
+        <li><a href="#results"
+            class="text-white font-semibold py-2 px-3 hover:text-blue-600 hover:bg-blue-100 hover:shadow-inner rounded-lg">Results</a>
+        </li>
+        <li><a href="#eluminies"
+            class="text-white font-semibold py-2 px-3 hover:text-blue-600 hover:bg-blue-100 hover:shadow-inner rounded-lg">Eluminies</a>
+        </li>
+        <li><a href="#contact-us"
+            class="text-white font-semibold py-2 px-3 hover:text-blue-600 hover:bg-blue-100 hover:shadow-inner rounded-lg">Contact
+            Us</a>
+        </li>
+      </ul>
+    </nav>
 
-              <!-- Dots Indicator -->
-              <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
-                <span onclick="goToSlide(0)" class="dot h-3 w-3 bg-gray-300 bg-opacity-50 rounded-full cursor-pointer" data-slide="0"></span>
-                <span onclick="goToSlide(1)" class="dot h-3 w-3 bg-gray-300 bg-opacity-50 rounded-full cursor-pointer" data-slide="1"></span>
-                <span onclick="goToSlide(2)" class="dot h-3 w-3 bg-gray-300 bg-opacity-50 rounded-full cursor-pointer" data-slide="2"></span>
-                <span onclick="goToSlide(3)" class="dot h-3 w-3 bg-gray-300 bg-opacity-50 rounded-full cursor-pointer" data-slide="3"></span>
-            </div>
-           </div>
+    <!-- Carousel for Activity Photos -->
+    <!-- Activity Carousel -->
+    <div class="">
+      <!-- Activity Carousel -->
+      <div class="relative w-full overflow-hidden shadow-lg">
+        <div class="carousel">
+          <img v-for="(slide, index) in slides" :src="slide.image" :alt="slide.alt"
+            :class="['carousel-item w-full object-cover', {'active': index === currentSlide }]">
         </div>
 
-        <!-- Facilities Section -->
-        <section class="container mx-auto my-8">
-          <h2 class="text-2xl font-semibold text-center text-blue-700">Facilities</h2>
-          <div class="flex justify-around mt-4 gap-x-4">
-              <div class="facility bg-white p-4 rounded-lg shadow-md w-1/4">
-                  <h3 class="text-lg font-bold text-blue-600">Sports</h3>
-                  <p>Our sports facilities include a basketball court, soccer field, and more.</p>
-              </div>
-              <div class="facility bg-white p-4 rounded-lg shadow-md w-1/4">
-                  <h3 class="text-lg font-bold text-blue-600">Projector</h3>
-                  <p>All classrooms are equipped with projectors for an enhanced learning experience.</p>
-              </div>
-              <div class="facility bg-white p-4 rounded-lg shadow-md w-1/4">
-                  <h3 class="text-lg font-bold text-blue-600">Computer Lab</h3>
-                  <p>Our computer lab provides students with the latest technology for hands-on learning.</p>
-              </div>
-              <div class="facility bg-white p-4 rounded-lg shadow-md w-1/4">
-                  <h3 class="text-lg font-bold text-blue-600">School Bus</h3>
-                  <p>Safe and reliable transportation is available for all students.</p>
-              </div>
-          </div>
-        </section>
+        <div class="absolute top-1/2 transform -translate-y-1/2 w-full flex justify-between">
+          <button @click="showPrevSlide"
+            class="bg-gray-800 text-white px-4 py-2 opacity-75 rounded-r-lg hover:opacity-100">❮</button>
+          <button @click="showNextSlide"
+            class="bg-gray-800 text-white px-4 py-2 opacity-75 rounded-l-lg hover:opacity-100">❯</button>
+        </div>
 
-        <!-- Introductory Video -->
-        <section class="container mx-auto my-8 text-center">
-            <h2 class="text-2xl font-semibold text-blue-700">Welcome to Our School</h2>
-            <video controls class="w-full h-64 mx-auto mt-4 rounded-lg">
-                <source src="mov.MOV" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </section>
+        <!-- Dots Indicator -->
+        <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
 
+          <span v-for="(dot, index) in slides" @click="goToSlide(index)"
+            class="dot h-3 w-3 bg-gray-300 bg-opacity-50 rounded-full cursor-pointer"
+            :class="{ 'bg-blue-500': currentSlide === index }"></span>
 
-        <section class="container mx-auto mb-8 p-6 bg-white rounded-lg shadow-lg">
-          <h2 class="text-2xl font-semibold mb-4 text-blue-600">Student Achievements</h2>
-          <ul class="list-disc pl-5 space-y-2">
-              <li class="border-b pb-2">First place in the inter-school science fair.</li>
-              <li class="border-b pb-2">Winner of the state-level basketball championship.</li>
-              <li class="border-b pb-2">National-level participant in the spelling bee competition.</li>
-              <li class="border-b pb-2">Art exhibition winner for the "Young Artists" category.</li>
-              <li>Top scorer in the mathematics Olympiad.</li>
-          </ul>
-      </section>
-
-      <!-- Parents Feedback Section -->
-      <section class="container mx-auto mb-6 p-6 bg-white rounded-lg shadow-lg">
-          <h2 class="text-2xl font-semibold mb-4 text-blue-600">Parents Feedback</h2>
-          <div class="space-y-4">
-              <blockquote class="border-l-4 border-blue-500 pl-4 italic text-gray-700 bg-gray-100 p-4 rounded-md">
-                  "The school has provided our child with a wonderful learning environment that encourages growth and curiosity."
-                  <footer class="text-right text-gray-600">— Mr. & Mrs. Sharma</footer>
-              </blockquote>
-              <blockquote class="border-l-4 border-blue-500 pl-4 italic text-gray-700 bg-gray-100 p-4 rounded-md">
-                  "We appreciate the dedication of the teachers and the range of activities offered to the students."
-                  <footer class="text-right text-gray-600">— Mrs. Gupta</footer>
-              </blockquote>
-              <blockquote class="border-l-4 border-blue-500 pl-4 italic text-gray-700 bg-gray-100 p-4 rounded-md">
-                  "The school has excellent facilities and a great support system for students and parents alike."
-                  <footer class="text-right text-gray-600">— Mr. Patel</footer>
-              </blockquote>
-          </div>
-      </section>
-
-
-        <!-- Footer -->
-        <footer class="bg-blue-700 text-white py-10">
-          <div class="container mx-auto px-4">
-              <div class="flex flex-col md:flex-row justify-between mb-6">
-                  <!-- School Info -->
-                  <div class="mb-6 md:mb-0">
-                      <h3 class="text-2xl font-bold mb-2">Shree Saraswati Shishu Mandir</h3>
-                      <p class="text-blue-200">Empowering students through quality education in a nurturing environment.</p>
-                  </div>
-                  <!-- Important Links -->
-                  <div class="mb-6 md:mb-0">
-                      <h4 class="text-lg font-semibold mb-4">Important Links</h4>
-                      <ul class="space-y-2">
-                          <li><a href="#home" class="hover:underline text-blue-200">Home</a></li>
-                          <li><a href="#about-us" class="hover:underline text-blue-200">About Us</a></li>
-                          <li><a href="#academics" class="hover:underline text-blue-200">Academics</a></li>
-                          <li><a href="#beyond-academics" class="hover:underline text-blue-200">Beyond Academics</a></li>
-                          <li><a href="#results" class="hover:underline text-blue-200">Results</a></li>
-                          <li><a href="#eluminies" class="hover:underline text-blue-200">Eluminies</a></li>
-                          <li><a href="#contact-us" class="hover:underline text-blue-200">Contact Us</a></li>
-                      </ul>
-                  </div>
-                  <!-- Contact Info and Social Links -->
-                  <div>
-                      <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
-                      <p class="text-blue-200">Gondal, Gujarat</p>
-                      <p class="text-blue-200">Email: info@saraswati-school-gondal.edu</p>
-                      <p class="text-blue-200">Phone: +91 12345 67890</p>
-                      <!-- Social Links -->
-                      <div class="flex mt-4 space-x-4">
-                          <a href="https://facebook.com" class="text-white hover:text-blue-300" aria-label="Facebook">
-                              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.73 0-1.325.595-1.325 1.325v21.351c0 .729.595 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.672c0-3.1 1.895-4.785 4.659-4.785 1.325 0 2.465.099 2.796.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.31h3.594l-.468 3.622h-3.126v9.293h6.126c.73 0 1.324-.595 1.324-1.324v-21.35c0-.73-.594-1.325-1.324-1.325z"/></svg>
-                          </a>
-                          <a href="https://youtube.com" class="text-white hover:text-blue-300" aria-label="YouTube">
-                              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a2.835 2.835 0 0 0-2.038-2.038c-1.796-.486-8.998-.486-8.998-.486s-7.203 0-8.999.486a2.835 2.835 0 0 0-2.038 2.038c-.486 1.796-.486 5.558-.486 5.558s0 3.762.486 5.558a2.835 2.835 0 0 0 2.038 2.038c1.796.486 8.999.486 8.999.486s7.202 0 8.998-.486a2.835 2.835 0 0 0 2.038-2.038c.486-1.796.486-5.558.486-5.558s0-3.762-.486-5.558zm-14.498 8.641v-7.382l6.305 3.691-6.305 3.691z"/></svg>
-                          </a>
-                      </div>
-                  </div>
-              </div>
-              <!-- Footer Bottom -->
-              <div class="mt-4 text-center border-t border-blue-500 pt-4 text-sm text-blue-200">
-                  © 2024 Shree Saraswati Shishu Mandir, Gondal. All rights reserved.
-              </div>
-          </div>
-      </footer>
-
-
+        </div>
       </div>
+    </div>
 
-      <script>
-        // JavaScript for auto-rotating carousel
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-item');
-        const dots = document.querySelectorAll('.dot');
-        const totalSlides = slides.length;
+    <!-- Facilities Section -->
+    <section class="container mx-auto my-8">
+      <h2 class="text-2xl font-semibold text-center text-blue-700">Facilities</h2>
+      <div class="flex justify-around mt-4 gap-x-4">
+        <div class="facility bg-white p-4 rounded-lg shadow-md w-1/4">
+          <h3 class="text-lg font-bold text-blue-600">Sports</h3>
+          <p>Our sports facilities include a basketball court, soccer field, and more.</p>
+        </div>
+        <div class="facility bg-white p-4 rounded-lg shadow-md w-1/4">
+          <h3 class="text-lg font-bold text-blue-600">Projector</h3>
+          <p>All classrooms are equipped with projectors for an enhanced learning experience.</p>
+        </div>
+        <div class="facility bg-white p-4 rounded-lg shadow-md w-1/4">
+          <h3 class="text-lg font-bold text-blue-600">Computer Lab</h3>
+          <p>Our computer lab provides students with the latest technology for hands-on learning.</p>
+        </div>
+        <div class="facility bg-white p-4 rounded-lg shadow-md w-1/4">
+          <h3 class="text-lg font-bold text-blue-600">School Bus</h3>
+          <p>Safe and reliable transportation is available for all students.</p>
+        </div>
+      </div>
+    </section>
 
-        function updateActiveSlide(index) {
-            // Hide all slides and remove active class from all dots
-            slides.forEach(slide => slide.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('bg-blue-500'));
+    <!-- Introductory Video -->
+    <section class="container mx-auto my-8 text-center">
+      <h2 class="text-2xl font-semibold text-blue-700">Welcome to Our School</h2>
+      <video controls class="w-full mx-auto mt-4 rounded-lg">
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
 
-            // Show the selected slide and highlight the corresponding dot
-            slides[index].classList.add('active');
-            dots[index].classList.add('bg-blue-500');
-        }
 
-        function showNextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateActiveSlide(currentSlide);
-        }
 
-        function showPrevSlide() {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            updateActiveSlide(currentSlide);
-        }
+    <section class="bg-blue-200 shadow-lg">
+      <div class="container mx-auto mb-8 p-6">
+        <h2 class="text-2xl font-semibold mb-4 text-center text-blue-600">Student Achievements</h2>
+        <ul class="list-disc pl-5 space-y-2">
+          <li class="pb-2">First place in the inter-school science fair.</li>
+          <li class="pb-2">Winner of the state-level basketball championship.</li>
+          <li class="pb-2">National-level participant in the spelling bee competition.</li>
+          <li class="pb-2">Art exhibition winner for the "Young Artists" category.</li>
+          <li>Top scorer in the mathematics Olympiad.</li>
+        </ul>
+      </div>
+    </section>
 
-        function goToSlide(index) {
-            currentSlide = index;
-            updateActiveSlide(currentSlide);
-        }
+    <!-- Parents Feedback Section -->
+    <section class="container mx-auto mb-6 p-6">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-600 text-center">Parents Feedback</h2>
+      <div class="flex items-stretch space-x-4">
+        <blockquote
+          class="border-l-4 border-blue-500 pl-4 italic text-gray-700 bg-white p-4 rounded-md shadow-md w-1/3">
+          "The school has provided our child with a wonderful learning environment that encourages growth and
+          curiosity."
+          <footer class="text-right text-gray-600">— Mr. & Mrs. Sharma</footer>
+        </blockquote>
+        <blockquote
+          class="border-l-4 border-blue-500 pl-4 italic text-gray-700 bg-white p-4 rounded-md shadow-md w-1/3">
+          "We appreciate the dedication of the teachers and the range of activities offered to the students."
+          <footer class="text-right text-gray-600">— Mrs. Gupta</footer>
+        </blockquote>
+        <blockquote
+          class="border-l-4 border-blue-500 pl-4 italic text-gray-700 bg-white p-4 rounded-md shadow-md w-1/3">
+          "The school has excellent facilities and a great support system for students and parents alike."
+          <footer class="text-right text-gray-600">— Mr. Patel</footer>
+        </blockquote>
+      </div>
+    </section>
 
-        // Automatically change slides every 3 seconds
-        setInterval(showNextSlide, 3000);
-    </script>
 
-    </body>
+    <!-- Footer -->
+    <footer class="bg-blue-700 text-white pt-10 pb-6">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between">
+          <!-- School Info -->
+          <div class="flex-1 px-3 md:mb-0">
+            <h3 class="text-2xl font-bold mb-2">Shree Saraswati Shishu Mandir</h3>
+            <p class="text-blue-200">Empowering students through quality education in a nurturing environment.</p>
+          </div>
+          <!-- Important Links -->
+          <div class="flex-1 px-3 md:mb-0">
+            <h4 class="text-lg font-semibold mb-4">Important Links</h4>
+            <ul class="space-y-2">
+              <li><a href="#home" class="hover:underline text-blue-200">Home</a></li>
+              <li><a href="#about-us" class="hover:underline text-blue-200">About Us</a></li>
+              <li><a href="#academics" class="hover:underline text-blue-200">Academics</a></li>
+              <li><a href="#beyond-academics" class="hover:underline text-blue-200">Beyond Academics</a></li>
+              <li><a href="#results" class="hover:underline text-blue-200">Results</a></li>
+              <li><a href="#eluminies" class="hover:underline text-blue-200">Eluminies</a></li>
+              <li><a href="#contact-us" class="hover:underline text-blue-200">Contact Us</a></li>
+            </ul>
+          </div>
+          <!-- Contact Info and Social Links -->
+          <div class="flex-1 px-3">
+            <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+            <p class="text-blue-200">10, Station Plot, Station Rd Number 9, opp. S.P. Office, Devmata, Sation Plot,
+              Bhaymath-2, Gondal, Gujarat 360311</p>
+            <p class="text-blue-200">Email: info@saraswati-school-gondal.edu</p>
+            <p class="text-blue-200">Phone: 02825225385</p>
+            <!-- Social Links -->
+            <div class="flex mt-4 space-x-4">
+              <a href="https://facebook.com" class="text-white hover:text-blue-300" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M22.675 0h-21.35c-.73 0-1.325.595-1.325 1.325v21.351c0 .729.595 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.672c0-3.1 1.895-4.785 4.659-4.785 1.325 0 2.465.099 2.796.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.31h3.594l-.468 3.622h-3.126v9.293h6.126c.73 0 1.324-.595 1.324-1.324v-21.35c0-.73-.594-1.325-1.324-1.325z" />
+                </svg>
+              </a>
+              <a href="https://youtube.com" class="text-white hover:text-blue-300" aria-label="YouTube">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M23.498 6.186a2.835 2.835 0 0 0-2.038-2.038c-1.796-.486-8.998-.486-8.998-.486s-7.203 0-8.999.486a2.835 2.835 0 0 0-2.038 2.038c-.486 1.796-.486 5.558-.486 5.558s0 3.762.486 5.558a2.835 2.835 0 0 0 2.038 2.038c1.796.486 8.999.486 8.999.486s7.202 0 8.998-.486a2.835 2.835 0 0 0 2.038-2.038c.486-1.796.486-5.558.486-5.558s0-3.762-.486-5.558zm-14.498 8.641v-7.382l6.305 3.691-6.305 3.691z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Footer Bottom -->
+    <div class="text-center bg-blue-700 text-blue-200">
+      <!-- mt-4 text-center border-t border-blue-500 pt-4 text-sm text-blue-200 -->
+      <div class="container mx-auto border-t border-blue-500 py-6">
+        © 2024 Shree Saraswati Shishu Mandir, Gondal. All rights reserved.
+      </div>
+    </div>
+
+
+  </div>
+
+  <script src="./home.js"></script>
+
+</body>
+
 </html>
