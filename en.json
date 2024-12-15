@@ -1,3 +1,55 @@
 {
-  "school": "Shree Saraswati Shishu Mandir"
+  "school": "Shree Saraswati Shishu Mandir",
+  "desc": "Empowering students through quality education in a nurturing environment.",
+  "address": "10, Station Plot, Opp. S.P. Office, Sation Plot",
+  "city": "Gondal",
+  "state": "Gujarat",
+  "pincode": "360311",
+  "language": "Language",
+  "email": "Email",
+  "phone": "Phone",
+  "sections": {
+    "facilities": {
+      "title": "Facilities",
+      "sports_title": "Sports",
+      "sports_desc": "Our sports facilities include a basketball court, soccer field, and more.",
+      "porjector_title": "Projector",
+      "porjector_desc": "All classrooms are equipped with projectors for an enhanced learning experience.",
+      "comp_lab_title": "Computer Lab",
+      "comp_lab_desc": "Our computer lab provides students with the latest technology for hands-on learning.",
+      "school_bus_title": "School Bus",
+      "school_bus_desc": "Safe and reliable transportation is available for all students."
+    },
+    "intro": {
+      "title": "Welcome to our school"
+    },
+    "achivement": {
+      "title": "Student Achievements",
+      "l1": "First place in the inter-school science fair.",
+      "l2": "Winner of the state-level basketball championship.",
+      "l3": "National-level participant in the spelling bee competition.",
+      "l4": "Art exhibition winner for the \"Young Artists\" category.",
+      "l5": "Top scorer in the mathematics Olympiad."
+    },
+    "feedback": {
+      "title": "Parents Feedback",
+      "fb1": "The school has provided our child with a wonderful learning environment that encourages growth and curiosity.",
+      "parent1": "Mr. & Mrs. Trivedi",
+      "fb2": "We appreciate the dedication of the teachers and the range of activities offered to the students.",
+      "parent2": "Mrs. Patel",
+      "fb3": "The school has excellent facilities and a great support system for students and parents alike.",
+      "parent3": "Mr. Parmar"
+    }
+  },
+  "rights": "All rights reserved.",
+  "links_title": "Important Links",
+  "menu": {
+    "home": "Home",
+    "about": "About Us",
+    "academics": "Academics",
+    "beyond_academics": "Beyond Academics",
+    "results": "Results",
+    "eluminis": "Eluminies",
+    "contact": "Contact Us"
+  }
 }
