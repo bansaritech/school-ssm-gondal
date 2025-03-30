@@ -11,22 +11,23 @@
 	<meta name="description" content="Vah is the latest HTML5 template useful for any business or digital agency.">
 	<title>Vah | HTML5 Multi-purpose Responsive Template</title>
 	<!-- Modernizr script -->
-	<script src="assets/js/modernizr-custom.js"></script>
+	<script src="t1/template/assets/js/modernizr-custom.js"></script>
 	<!-- Site Favicon -->
-	<link rel="icon" type="image/png" href="images/icon.png">
+	<link rel="icon" type="image/ico" href="t1/template/assets/images/logo/icon-32X32.ico">
 	<!-- Icon fonts: Simple line icons  -->
-	<link rel="stylesheet" href="assets/icons/simple-line-icons/css/simple-line-icons.css" />
+	<link rel="stylesheet" href="t1/template/assets/icons/simple-line-icons/css/simple-line-icons.css" />
 	<!-- Icon fonts: Material design icons  -->
-	<link rel="stylesheet" href="assets/icons/material-design-icons/css/materialdesignicons.min.css">
+	<link rel="stylesheet" href="t1/template/assets/icons/material-design-icons/css/materialdesignicons.min.css">
 	<!-- Vah framework css -->
-	<link rel="stylesheet" type="text/css" href="assets/css/vah.css">
+	<link rel="stylesheet" type="text/css" href="t1/template/assets/css/vah.css">
 	<!-- Animate css -->
-	<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="t1/template/assets/css/animate.css">
 	<!-- Theme css -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style-skin2.css">
+	<link rel="stylesheet" type="text/css" href="t1/template/assets/css/style-dark.css">
 	<!-- Custom css -->
-	<link rel="stylesheet" type="text/css" href="assets/css/ssm.css">
+	<link rel="stylesheet" type="text/css" href="t1/template/assets/css/custom.css">
 </head>
+
 <body class="vah-body">
 	<!-- Scroll to top btn -->
 	<a href="#" class="scroll-to-top vah-smooth-link" data-tooltip="Go to top!" data-tooltip-placement="left">
@@ -46,22 +47,28 @@
 	<!-- Vah Theme Content Start -->
 	<div class="vah-theme" style="display: none;">
 		<!-- Header / Hero Unit -->
-
-		<header class="vah-header">
+		<header class="vah-to-next-ico">
 			<!-- Navbar / Menu bar -->
-			<div class="ssm-logo-container">
-				<div class="container">
-					<img class="logo" src="images/ssm-gondal-cropped.jpg" alt="">
-				</div>
-			</div>
-			<nav class="vah-navbar vah-navbar-stick vah-navbar-fixed" id="navbar">
+			<nav class="vah-navbar vah-navbar-stick vah-navbar-large vah-navbar-fixed navbar-transparent" id="navbar">
+				<!--
+				    *** Refence class for navbar ***
+					  - vah-navbar-stick vah-navbar-large navbar-transparent
+				  -->
+				<!-- Vah Menu Container -->
 				<div class="container vah-navbar-container">
 					<div class="vah-logo-v-center">
-						<!--					
+						<!--
+				        *** Logo ***
+				         ** Other logo class
+				          - vah-logo-lite white color logo
+				          - vah-logo-dark black color logo
+				      -->
 						<a href="index.html">
-							<h1 class="vah-logo"> Vah :)</h1>
+							<h1 class="vah-logo">
+								<img src="images/ssm-gondal.jpg"
+							</h1>
 						</a>
-						-->
+						<!-- End Logo -->
 						<!-- Toggle Menu Button -->
 						<div class="toggle-menu-icon" id="menu-toggle-btn">
 							<button><i class="mdi mdi-menu"></i></button>
@@ -180,7 +187,7 @@
 									<li>
 										<div class="nav-bg">
 											<div class="text-center mob-align-none">
-												<img src="assets/images/placeholder/product.png" alt="Product" />
+												<img src="t1/template/assets/images/placeholder/product.png" alt="Product" />
 												<div class="clearfix"></div><br />
 												<a href="#" class="btn"><i class="mdi mdi-cart"></i>&nbsp;Buy</a>
 											</div>
@@ -217,16 +224,32 @@
 				<!-- slider slides -->
 				<div class="vah-slider-slides">
 					<!-- Slide 1 -->
-					<div class="vah-slider-slide" data-vah-slider-image="assets/images/slider/slide_1.jpg">
+					<div class="vah-slider-slide" data-vah-slider-image="images/1.jpg">
+						<div class="vah-slider-content">
+							<h1 class="vah-slider-title">Welcome to the <span><strong>"Vah"</strong></span> Template!</h1>
+							<div class="clearfix"></div>
+							<a href="about.html" class="vah-gs-btn"><i class="mdi mdi-link"></i>&nbsp;Learn More</a>
+						</div>
 					</div>
 					<!-- Slide 2 -->
-					<div class="vah-slider-slide" data-vah-slider-image="assets/images/slider/slide_2.jpg">
+					<div class="vah-slider-slide" data-vah-slider-image="images/2.jpeg">
+						<div class="vah-slider-content">
+							<div class="vah-slider-inner">
+								<div class="vah-slider-inner-content">
+									<h1 class="vah-slider-title">Multi-purpose Responsive Template</h1>
+								</div>
+							</div>
+						</div>
 					</div>
 					<!-- Slide 2 -->
-					<div class="vah-slider-slide" data-vah-slider-image="assets/images/slider/slide_3.jpg">
-					</div>
-					<!-- Slide 4 -->
-					<div class="vah-slider-slide" data-vah-slider-image="assets/images/slider/slide_4.jpg">
+					<div class="vah-slider-slide" data-vah-slider-image="images/3.jpg">
+						<div class="vah-slider-content">
+							<div class="vah-slider-inner">
+								<div class="vah-slider-inner-content">
+									<h1 class="vah-slider-title">Creative & Stunning HTML5 Template</h1>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<!-- Slider action navs -->
@@ -246,7 +269,6 @@
 			<!-- End Go To About -->
 		</header>
 		<!-- End Header -->
-		 
 		<!-- Section: welcome to our site -->
 		<section class="vah-section">
 			<div class="vah-section-padding container" id="about">
@@ -452,7 +474,7 @@
 						<div class="col-bs-4 vah-special-center">
 							<div class="vah-animated" data-animated-class="fadeInLeft" data-animated-delay="0.3">
 								<div class="vah-special-box">
-									<img src="assets/icons/svg/code.svg">
+									<img src="t1/template/assets/icons/svg/code.svg">
 								</div>
 								<div class="clearfix"></div><br />
 								<h3 class="vah-label">Neat & Clean Code</h3>
@@ -464,7 +486,7 @@
 						<div class="col-bs-4 vah-special-center">
 							<div class="vah-animated" data-animated-class="fadeInLeft" data-animated-delay="0.6">
 								<div class="vah-special-box">
-									<img src="assets/icons/svg/devices.svg">
+									<img src="t1/template/assets/icons/svg/devices.svg">
 								</div>
 								<div class="clearfix"></div><br />
 								<h3 class="vah-label">Responsive</h3>
@@ -476,7 +498,7 @@
 						<div class="col-bs-4 vah-special-center">
 							<div class="vah-animated" data-animated-class="fadeInLeft" data-animated-delay="0.9">
 								<div class="vah-special-box">
-									<img src="assets/icons/svg/settings.svg">
+									<img src="t1/template/assets/icons/svg/settings.svg">
 								</div>
 								<div class="clearfix"></div><br />
 								<h3 class="vah-label">Easy Customization</h3>
@@ -532,27 +554,27 @@
 				<div class="vah-client-logo">
 					<div class="row text-center">
 						<div class="col-bs-2 col-ts-6">
-							<img class="vah-client-img vah-animated" src="assets/images/clients/1.gif" alt="Clients"
+							<img class="vah-client-img vah-animated" src="t1/template/assets/images/clients/1.gif" alt="Clients"
 								data-animated-class="fadeInUp" data-animated-delay="0" />
 						</div>
 						<div class="col-bs-2 col-ts-6">
-							<img class="vah-client-img vah-animated" src="assets/images/clients/2.gif" alt="Clients"
+							<img class="vah-client-img vah-animated" src="t1/template/assets/images/clients/2.gif" alt="Clients"
 								data-animated-class="fadeInUp" data-animated-delay="0.15" />
 						</div>
 						<div class="col-bs-2 col-ts-6">
-							<img class="vah-client-img vah-animated" src="assets/images/clients/3.gif" alt="Clients"
+							<img class="vah-client-img vah-animated" src="t1/template/assets/images/clients/3.gif" alt="Clients"
 								data-animated-class="fadeInUp" data-animated-delay="0.30" />
 						</div>
 						<div class="col-bs-2 col-ts-6">
-							<img class="vah-client-img vah-animated" src="assets/images/clients/4.gif" alt="Clients"
+							<img class="vah-client-img vah-animated" src="t1/template/assets/images/clients/4.gif" alt="Clients"
 								data-animated-class="fadeInUp" data-animated-delay="0.45" />
 						</div>
 						<div class="col-bs-2 col-ts-6">
-							<img class="vah-client-img vah-animated" src="assets/images/clients/5.gif" alt="Clients"
+							<img class="vah-client-img vah-animated" src="t1/template/assets/images/clients/5.gif" alt="Clients"
 								data-animated-class="fadeInUp" data-animated-delay="0.60" />
 						</div>
 						<div class="col-bs-2 col-ts-6">
-							<img class="vah-client-img vah-animated" src="assets/images/clients/6.gif" alt="Clients"
+							<img class="vah-client-img vah-animated" src="t1/template/assets/images/clients/6.gif" alt="Clients"
 								data-animated-class="fadeInUp" data-animated-delay="0.75" />
 						</div>
 					</div>
@@ -697,9 +719,9 @@
 	</div>
 
 	<!-- jQuery -->
-	<script src="assets/js/jquery.min.js"></script>
+	<script src="t1/template/assets/js/jquery.min.js"></script>
 	<!-- Main Template JS -->
-	<script src="assets/js/main.js"></script>
+	<script src="t1/template/assets/js/main.js"></script>
 	<!-- Initialize vah carousel -->
 	<script>
 		$("#vah-slider").vahSlider({
@@ -708,4 +730,5 @@
 		});
 	</script>
 </body>
+
 </html>

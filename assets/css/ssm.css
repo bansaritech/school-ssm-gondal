@@ -1,0 +1,28 @@
+:root {
+    --logo-container-height: 130px;
+}
+  
+
+
+
+.ssm-logo-container .container,
+.ssm-logo-container .container img.logo {
+    max-height: var(--logo-container-height);
+}
+
+.ssm-logo-container {
+    height: var(--logo-container-height);
+    background-color: white;
+}
+
+.vah-header:before {
+    background: transparent;
+}
+
+.vah-theme-overlay,
+.vah-slider .vah-slider-slide:before {
+    background: transparent;
+  /* background: -webkit-linear-gradient(to right, rgba(44,121,244,0.5), rgba(44,121,244,0.5));
+  background: -moz-linear-gradient(to right, rgba(44,121,244,0.5), rgba(44,121,244,0.5));
+  background: linear-gradient(to right, rgba(44,121,244,0.5), rgba(103,58,183,0.5)); */
+}

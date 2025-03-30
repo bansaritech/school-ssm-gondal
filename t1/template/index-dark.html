@@ -13,7 +13,7 @@
 	<!-- Modernizr script -->
 	<script src="assets/js/modernizr-custom.js"></script>
 	<!-- Site Favicon -->
-	<link rel="icon" type="image/png" href="images/icon.png">
+	<link rel="icon" type="image/ico" href="assets/images/logo/icon-32X32.ico">
 	<!-- Icon fonts: Simple line icons  -->
 	<link rel="stylesheet" href="assets/icons/simple-line-icons/css/simple-line-icons.css" />
 	<!-- Icon fonts: Material design icons  -->
@@ -23,10 +23,9 @@
 	<!-- Animate css -->
 	<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
 	<!-- Theme css -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style-skin2.css">
-	<!-- Custom css -->
-	<link rel="stylesheet" type="text/css" href="assets/css/ssm.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style-dark.css">
 </head>
+
 <body class="vah-body">
 	<!-- Scroll to top btn -->
 	<a href="#" class="scroll-to-top vah-smooth-link" data-tooltip="Go to top!" data-tooltip-placement="left">
@@ -46,22 +45,26 @@
 	<!-- Vah Theme Content Start -->
 	<div class="vah-theme" style="display: none;">
 		<!-- Header / Hero Unit -->
-
-		<header class="vah-header">
+		<header class="vah-to-next-ico">
 			<!-- Navbar / Menu bar -->
-			<div class="ssm-logo-container">
-				<div class="container">
-					<img class="logo" src="images/ssm-gondal-cropped.jpg" alt="">
-				</div>
-			</div>
-			<nav class="vah-navbar vah-navbar-stick vah-navbar-fixed" id="navbar">
+			<nav class="vah-navbar vah-navbar-stick vah-navbar-large vah-navbar-fixed navbar-transparent" id="navbar">
+				<!--
+				    *** Refence class for navbar ***
+					  - vah-navbar-stick vah-navbar-large navbar-transparent
+				  -->
+				<!-- Vah Menu Container -->
 				<div class="container vah-navbar-container">
 					<div class="vah-logo-v-center">
-						<!--					
+						<!--
+				        *** Logo ***
+				         ** Other logo class
+				          - vah-logo-lite white color logo
+				          - vah-logo-dark black color logo
+				      -->
 						<a href="index.html">
 							<h1 class="vah-logo"> Vah :)</h1>
 						</a>
-						-->
+						<!-- End Logo -->
 						<!-- Toggle Menu Button -->
 						<div class="toggle-menu-icon" id="menu-toggle-btn">
 							<button><i class="mdi mdi-menu"></i></button>
@@ -218,15 +221,41 @@
 				<div class="vah-slider-slides">
 					<!-- Slide 1 -->
 					<div class="vah-slider-slide" data-vah-slider-image="assets/images/slider/slide_1.jpg">
+						<div class="vah-slider-content">
+							<h1 class="vah-slider-title">Welcome to the <span><strong>"Vah"</strong></span> Template!</h1>
+							<div class="clearfix"></div>
+							<a href="about.html" class="vah-gs-btn"><i class="mdi mdi-link"></i>&nbsp;Learn More</a>
+						</div>
 					</div>
 					<!-- Slide 2 -->
 					<div class="vah-slider-slide" data-vah-slider-image="assets/images/slider/slide_2.jpg">
+						<div class="vah-slider-content">
+							<div class="vah-slider-inner">
+								<div class="vah-slider-inner-content">
+									<h1 class="vah-slider-title">Multi-purpose Responsive Template</h1>
+								</div>
+							</div>
+						</div>
 					</div>
 					<!-- Slide 2 -->
 					<div class="vah-slider-slide" data-vah-slider-image="assets/images/slider/slide_3.jpg">
+						<div class="vah-slider-content">
+							<div class="vah-slider-inner">
+								<div class="vah-slider-inner-content">
+									<h1 class="vah-slider-title">Creative & Stunning HTML5 Template</h1>
+								</div>
+							</div>
+						</div>
 					</div>
 					<!-- Slide 4 -->
 					<div class="vah-slider-slide" data-vah-slider-image="assets/images/slider/slide_4.jpg">
+						<div class="vah-slider-content">
+							<div class="vah-slider-inner">
+								<div class="vah-slider-inner-content">
+									<h1 class="vah-slider-title">Vah means <span><strong>"Wow"</strong></span> , isn't it?</h1>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<!-- Slider action navs -->
@@ -246,7 +275,6 @@
 			<!-- End Go To About -->
 		</header>
 		<!-- End Header -->
-		 
 		<!-- Section: welcome to our site -->
 		<section class="vah-section">
 			<div class="vah-section-padding container" id="about">
@@ -708,4 +736,5 @@
 		});
 	</script>
 </body>
+
 </html>

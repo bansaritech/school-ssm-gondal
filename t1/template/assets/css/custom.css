@@ -1,0 +1,6 @@
+.vah-logo img {
+    clip: rect(0px, 200px, 145px, 13px);
+    position: absolute;
+    max-height: 210px;
+    top: -110px;
+}
