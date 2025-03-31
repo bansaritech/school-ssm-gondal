@@ -1,9 +1,8 @@
 :root {
     --logo-container-height: 130px;
+    font-family: 'Mulish', sans-serif;
+
 }
-  
-
-
 
 .ssm-logo-container .container,
 .ssm-logo-container .container img.logo {
@@ -26,3 +25,275 @@
   background: -moz-linear-gradient(to right, rgba(44,121,244,0.5), rgba(44,121,244,0.5));
   background: linear-gradient(to right, rgba(44,121,244,0.5), rgba(103,58,183,0.5)); */
 }
+
+.flex {
+    display: flex;
+}
+
+.ssm-vb-title {
+    margin: auto 10px;
+    font-size: larger;
+    font-family: sans-serif;
+    font-weight: 800;
+}
+
+.ssm-logo-container .container img.logo.vb {
+    transform: scale(.9);
+}
+img.logo.vb {
+    max-height: var(--logo-container-height);
+    clip-path: inset(0% 19% 0% 19%);
+    margin: 0 -25px;
+}
+footer.footer .ssm-vb-title {
+    color: white;
+    margin-left: 20px;
+}
+
+footer.footer .main-footer .vah-footer-social {
+    margin-top: 25px;
+}
+
+.addmission-container {
+    position: absolute;
+    width: 100%;
+}
+
+.addmission-container .addmission {
+    text-align: right;
+}
+
+/* 
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: auto;
+    text-align: right;
+}
+
+.contact-info .ssm-icon {
+    height: 10px;
+}
+
+.contact-info .txt {
+    padding: 10px;
+}
+*/
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: auto;
+    text-align: right;
+    gap: 12px;
+}
+
+.contact-info div {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: flex-end; /* Aligns content to the right */
+    gap: 8px; /* Adds spacing between icon and text */
+}
+
+.contact-info .ssm-icon {
+    height: 20px; /* Adjust size for better visibility */
+    width: 20px; /* Ensure proportional width */
+    flex-shrink: 0; /* Prevents SVG from shrinking */
+}
+
+.contact-info .txt {
+    padding: 0; /* Remove extra padding */
+}
+
+
+#vah-slider.vah-slider {
+    height: calc(100vh - 190px);
+    position: relative;
+}
+
+header.vah-header {
+    background-image: none;
+    height: calc(100vh - 190px);
+
+}
+
+
+
+/* Fix for mouse icon positioning */
+.header-arrow-mouse {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.header-arrow-mouse a {
+    color: #333;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.header-arrow-mouse a:hover {
+    color: #000;
+    transform: translateY(5px);
+}
+
+/* Ensure proper header positioning */
+header.vah-header {
+    background-image: none;
+    height: calc(100vh - 190px);
+    position: relative;  /* Add this */
+}
+
+/* Fix slider and section spacing */
+#vah-slider.vah-slider {
+    height: calc(100vh - 190px);
+    position: relative;
+    margin-bottom: 0; /* Remove any bottom margin */
+}
+
+header.vah-header {
+    background-image: none;
+    height: calc(100vh - 190px);
+    position: relative;
+    margin-bottom: 0; /* Remove any bottom margin */
+}
+
+/* Remove background and adjust spacing */
+.vah-section {
+    margin-top: 0;
+    background: none; /* Remove any background */
+}
+
+.vah-responsive {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Add black shadow to slider bottom */
+.vah-slider .vah-slider-slide:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 150px; /* Adjust height of shadow as needed */
+    /* background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7)) !important; */
+    z-index: 1;
+}
+
+/* Ensure mouse icon is visible over the shadow */
+.header-arrow-mouse {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.header-arrow-mouse a {
+    color: #fff; /* Change color to white for better visibility on dark shadow */
+    text-decoration: none;
+}
+
+.header-arrow-mouse a:hover {
+    color: #fff;
+    transform: translateY(5px);
+}
+
+
+/* Facilities Section Styling */
+.ssm-facilities {
+    background: #f8f9fa;
+    padding: 60px 0;
+}
+
+.ssm-facilities .col-bs-6 {
+    padding: 0 15px; /* Add horizontal spacing between cards */
+}
+
+.facility-card {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    padding: 30px; /* Increased padding */
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Ensure equal height */
+}
+
+.facility-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.facility-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color, #2c79f4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.facility-icon i {
+    font-size: 28px;
+    color: white;
+}
+
+.facility-content {
+    flex-grow: 1;
+}
+
+.facility-content h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.facility-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.facility-list li {
+    padding: 8px 0;
+    position: relative;
+    padding-left: 20px; /* Reduced left padding */
+    color: #666;
+    line-height: 1.5;
+}
+
+.facility-list li:before {
+    content: "•";
+    color: var(--primary-color, #2c79f4);
+    position: absolute;
+    left: 0;
+    top: 7px; /* Align bullet with text */
+    font-size: 16px; /* Slightly smaller bullet */
+    line-height: 1;
+}
+
+@media (max-width: 768px) {
+    .facility-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .facility-icon {
+        margin: 0 auto 20px;
+    }
+
+    .facility-list li {
+        text-align: left;
+    }
+}
+
+

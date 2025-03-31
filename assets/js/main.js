@@ -108,7 +108,7 @@ $(document).ready(function(){
   $('.header-arrow-mouse a').click(function(e){
     if( $('#navbar').hasClass('vah-navbar-stick') ) {
       $('html, body').stop().animate({
-        'scrollTop': $('#about').offset().top - Number($('.vah-navbar').height())
+        'scrollTop': $('#intro').offset().top - Number($('.vah-navbar').height())
       }, 900, function () {
       });
     }
