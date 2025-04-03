@@ -1624,7 +1624,7 @@
   width: 100%;
   content: " ";
   position: absolute;
-  box-shadow: 0 -100px 45px -45px #fff inset;
+  box-shadow: 0 -100px 45px -45px #000 inset;
 }
 .vah-slider .vah-slider-slide .vah-slider-content {
   position: relative;

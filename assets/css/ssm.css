@@ -113,6 +113,10 @@ footer.footer .main-footer .vah-footer-social {
     position: relative;
 }
 
+#vah-slider.vah-slider.vah-slider-fixed {
+    height: calc(100vh - 130px);
+}
+
 header.vah-header {
     background-image: none;
     height: calc(100vh - 190px);
@@ -544,5 +548,117 @@ header.vah-header {
     
     .new-building-image {
         margin-bottom: 20px;
+    }
+}
+
+
+/* Donation Section Styling */
+.ssm-donation {
+    background: #f8f9fa;
+    padding: 80px 0;
+    position: relative;
+}
+
+.donation-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.donation-desc {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.donation-reasons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.reason-item {
+    flex: 1 1 250px;
+    max-width: 300px;
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.reason-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.reason-icon {
+    background: #f96f03;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.reason-icon i {
+    font-size: 28px;
+    color: white;
+}
+
+.reason-text h4 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.reason-text p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.donation-cta-container {
+    margin-top: 40px;
+}
+
+.donation-cta {
+    display: inline-block;
+    background: #f96f03;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(249, 111, 3, 0.3);
+}
+
+.donation-cta:hover {
+    background: #e05e00;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(249, 111, 3, 0.4);
+}
+
+@media (max-width: 768px) {
+    .donation-reasons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .reason-item {
+        max-width: 100%;
     }
 }

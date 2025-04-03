@@ -425,11 +425,13 @@ $(window).scroll(function(e){
       }
       if ( windowpos  > 130 ) {
         if( is_not_sticky ) {
+          $("#vah-slider.vah-slider").addClass("vah-slider-fixed");
           nav_id.addClass("stick "+ menu_animated_class);
           // $('.pre-header').slideUp();
           is_not_sticky = false;
         }
       } else {
+        $("#vah-slider.vah-slider").removeClass("vah-slider-fixed");
         nav_id.removeClass("stick "+ menu_animated_class);
         // $('.pre-header').slideDown();
         is_not_sticky = true;
