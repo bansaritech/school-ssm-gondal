@@ -454,15 +454,15 @@ textarea {
 /* Selection color */
 ::selection {
   color: #FFFFFF;
-  background: #0c6db8;
+  background: #2f3082;
 }
 ::-moz-selection {
   color: #FFFFFF;
-  background: #0c6db8;
+  background: #2f3082;
 }
 ::-webkit-selection {
   color: #FFFFFF;
-  background: #0c6db8;
+  background: #2f3082;
 }
 
 /* Scroll bar CSS */

@@ -379,7 +379,7 @@
   box-shadow: 0 5px 5px -5px rgba(0,0,0,0.2);
   width: 100%;
   /* background: linear-gradient(45deg, #2c79f4 0%, #673ab7 100%); */
-  background: linear-gradient(45deg, #2c79f4 0%, #673ab7 100%);
+  background: #f96f03;
   position: relative;
 }
 .vah-navbar .main-menu {
@@ -669,9 +669,9 @@
 .vah-service-tabs .vah-service-tab-content .vah-service-content .vah-service-content-center .vah-service-part-left .vah-service-part-left-inside i,
 .vah-navbar-container .toggle-menu-icon button {
   background: #2c79f4;
-  background: -webkit-linear-gradient(left, #2c79f4, #673ab7);
-  background: -moz-linear-gradient(left, #2c79f4, #673ab7);
-  background: linear-gradient(left, #2c79f4, #673ab7);
+  background: -webkit-linear-gradient(left, #f96f03, #595aea);
+  background: -moz-linear-gradient(left, #f96f03, #595aea);
+  background: linear-gradient(left, #f96f03, #595aea);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -682,9 +682,9 @@
 .txt-gradient-reverse,
 .vah-logo:hover {
   background: #673ab7;
-  background: -webkit-linear-gradient(left, #673ab7, #2c79f4);
-  background: -moz-linear-gradient(left, #673ab7, #2c79f4);
-  background: linear-gradient(left, #673ab7, #2c79f4);
+  background: -webkit-linear-gradient(left, #f96f03, #595aea);
+  background: -moz-linear-gradient(left, #f96f03, #595aea);
+  background: linear-gradient(left, #f96f03, #595aea);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -696,9 +696,9 @@
 .vah-main-title,
 .vah-fi-box:hover .vah-fi i:before,
 .vah-features .vah-features-block:hover .vah-feature-icon {
-  background: -webkit-linear-gradient(#2c79f4, #673ab7);
-  background: -moz-linear-gradient(#2c79f4, #673ab7);
-  background: linear-gradient(#2c79f4, #673ab7);
+  background: -webkit-linear-gradient(#f96f03, #595aea);
+  background: -moz-linear-gradient(#f96f03, #595aea);
+  background: linear-gradient(#f96f03, #595aea);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -716,9 +716,9 @@
 .vah-progress .vah-progress-group .vah-progress-bar-bg .vah-progress-bars,
 .footer-gradient-line {
   background: #2c79f4;
-  background: -webkit-linear-gradient(to right, #2c79f4, #673ab7);
-  background: -moz-linear-gradient(to right, #2c79f4, #673ab7);
-  background: linear-gradient(to right, #2c79f4, #673ab7);
+  background: -webkit-linear-gradient(to right, #f96f03, #595aea);
+  background: -moz-linear-gradient(to right, #f96f03, #595aea);
+  background: linear-gradient(to right, #f96f03, #595aea);
 }
 /*
 * Dark overlay
@@ -1960,9 +1960,9 @@
 }
 .vah-numbers .vah-number-inside .vah-number-digit {
   background: $color1;
-  background: -webkit-linear-gradient(top, #2c79f4, #673ab7);
-  background: -moz-linear-gradient(top, #2c79f4, #673ab7);
-  background: linear-gradient(top, #2c79f4, #673ab7);
+  background: -webkit-linear-gradient(top, #f96f03, #595aea);
+  background: -moz-linear-gradient(top, #f96f03, #595aea);
+  background: linear-gradient(top, #f96f03, #595aea);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2860,9 +2860,9 @@
 */
 .vah-footer-title {
   background: $color1;
-  background: -webkit-linear-gradient(left, #2c79f4, #673ab7);
-  background: -moz-linear-gradient(left, #2c79f4, #673ab7);
-  background: linear-gradient(left, #2c79f4, #673ab7);
+  background: -webkit-linear-gradient(left, #f96f03, #595aea);
+  background: -moz-linear-gradient(left, #f96f03, #595aea);
+  background: linear-gradient(left, #f96f03, #595aea);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
