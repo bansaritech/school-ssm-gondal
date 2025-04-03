@@ -378,6 +378,7 @@
 .vah-navbar {
   box-shadow: 0 5px 5px -5px rgba(0,0,0,0.2);
   width: 100%;
+  /* background: linear-gradient(45deg, #2c79f4 0%, #673ab7 100%); */
   background: linear-gradient(45deg, #2c79f4 0%, #673ab7 100%);
   position: relative;
 }
