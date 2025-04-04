@@ -626,11 +626,16 @@ header.vah-header {
     font-size: 14px;
 }
 
-.donation-cta-container {
+.ssm-cta-container {
     margin-top: 40px;
 }
 
-.donation-cta {
+.ssm-cta-container.text-center {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.ssm-cta {
     display: inline-block;
     background: #f96f03;
     color: white;
@@ -643,7 +648,7 @@ header.vah-header {
     box-shadow: 0 4px 10px rgba(249, 111, 3, 0.3);
 }
 
-.donation-cta:hover {
+.ssm-cta:hover {
     background: #e05e00;
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(249, 111, 3, 0.4);
@@ -827,4 +832,124 @@ header.vah-header {
 .lightbox-content {
     z-index: 9999;
     position: relative;
+}
+
+/* Lightbox Modal Styles */
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80vh;
+    object-fit: contain;
+    position: relative;
+    z-index: 9999;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    border-radius: 4px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 10001;
+}
+
+.lightbox-close:hover {
+    color: #f96f03;
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+#lightbox-caption {
+    margin: auto;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #fff;
+    padding: 15px 0;
+    height: auto;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Lightbox Navigation Buttons */
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    box-sizing: border-box;
+    transform: translateY(-50%);
+    z-index: 10000;
+    pointer-events: none;
+}
+
+.lightbox-prev,
+.lightbox-next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    pointer-events: auto;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background-color: #f96f03;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+}
+
+.lightbox-prev i,
+.lightbox-next i {
+    font-size: 28px;
+}
+
+/* Responsive adjustments for lightbox */
+@media (max-width: 768px) {
+    .lightbox-content {
+        max-width: 90%;
+    }
+    
+    .lightbox-nav {
+        padding: 0 15px;
+    }
+    
+    .lightbox-prev,
+    .lightbox-next {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .lightbox-close {
+        top: 10px;
+        right: 20px;
+        font-size: 30px;
+    }
 }
