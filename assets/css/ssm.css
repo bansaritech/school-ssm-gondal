@@ -529,7 +529,7 @@ header.vah-header {
 .new-building-image img {
     width: 100%;
     border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
     transition: transform 0.3s ease;
 }
 
@@ -953,3 +953,9 @@ header.vah-header {
         font-size: 30px;
     }
 }
+
+.footer .main-footer .vah-footer-social i:hover {
+    transform: scale(1.1);
+    border-radius: 8px;
+  }
+  
