@@ -478,6 +478,122 @@
 		</section>
 
 
+		<!-- Section: Event Gallery -->
+		<section class="vah-section ssm-event-gallery">
+			<div class="vah-section-padding container">
+				<h2 class="vah-heading">Recent <strong class="vah-primary-clr">Events</strong></h2>
+				<p class="vah-text text-center">Take a glimpse at some of our recent school events and celebrations</p>
+				
+				<div class="event-gallery-container">
+					<!-- Annual Day Event -->
+					<div class="event-category">
+						<h3 class="event-title">Annual Day Celebration</h3>
+						<div class="event-images">
+							<div class="gallery-image">
+								<img src="images/annual_function/WhatsApp Image 2025-03-29 at 11.31.21 AM.jpeg" alt="Annual Day Performance" class="lightbox-img">
+								<div class="image-overlay">
+									<button class="view-image-btn"><i class="mdi mdi-magnify-plus"></i> View</button>
+								</div>
+							</div>
+							<div class="gallery-image">
+								<img src="images/annual_function/WhatsApp Image 2025-03-29 at 11.31.22 AM.jpeg" alt="Annual Day Award Ceremony" class="lightbox-img">
+								<div class="image-overlay">
+									<button class="view-image-btn"><i class="mdi mdi-magnify-plus"></i> View</button>
+								</div>
+							</div>
+							<div class="gallery-image">
+								<img src="images/annual_function/WhatsApp Image 2025-03-29 at 11.31.23 AM.jpeg" alt="Annual Day Group Photo" class="lightbox-img">
+								<div class="image-overlay">
+									<button class="view-image-btn"><i class="mdi mdi-magnify-plus"></i> View</button>
+								</div>
+							</div>
+							<div class="gallery-image">
+								<img src="images/annual_function/WhatsApp Image 2025-03-29 at 11.31.24 AM.jpeg" alt="Annual Day Performances" class="lightbox-img">
+								<div class="image-overlay">
+									<button class="view-image-btn"><i class="mdi mdi-magnify-plus"></i> View</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Sports Day Event -->
+					<div class="event-category">
+						<h3 class="event-title">Matrubhasha Din</h3>
+						<div class="event-images">
+							<div class="gallery-image">
+								<img src="images/matrubhasha_din/WhatsApp Image 2025-03-29 at 11.32.12 AM.jpeg" alt="Running Race" class="lightbox-img">
+								<div class="image-overlay">
+									<button class="view-image-btn"><i class="mdi mdi-magnify-plus"></i> View</button>
+								</div>
+							</div>
+							<div class="gallery-image">
+								<img src="images/matrubhasha_din/WhatsApp Image 2025-03-29 at 11.32.13 AM.jpeg" alt="Team Sports" class="lightbox-img">
+								<div class="image-overlay">
+									<button class="view-image-btn"><i class="mdi mdi-magnify-plus"></i> View</button>
+								</div>
+							</div>
+							<div class="gallery-image">
+								<img src="images/matrubhasha_din/WhatsApp Image 2025-03-29 at 11.32.14 AM.jpeg" alt="Prize Distribution" class="lightbox-img">
+								<div class="image-overlay">
+									<button class="view-image-btn"><i class="mdi mdi-magnify-plus"></i> View</button>
+								</div>
+							</div>
+							<div class="gallery-image">
+								<img src="images/matrubhasha_din/WhatsApp Image 2025-03-29 at 11.32.15 AM.jpeg" alt="Sports Activities" class="lightbox-img">
+								<div class="image-overlay">
+									<button class="view-image-btn"><i class="mdi mdi-magnify-plus"></i> View</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Science Exhibition -->
+					<div class="event-category">
+						<h3 class="event-title">Science Fair</h3>
+						<div class="event-images">
+							<div class="gallery-image">
+								<img src="images/science_fair/WhatsApp Image 2025-03-29 at 11.30.13 AM.jpeg" alt="Science Project Display" class="lightbox-img">
+								<div class="image-overlay">
+									<button class="view-image-btn"><i class="mdi mdi-magnify-plus"></i> View</button>
+								</div>
+							</div>
+							<div class="gallery-image">
+								<img src="images/science_fair/WhatsApp Image 2025-03-29 at 11.30.15 AM.jpeg" alt="Live Demonstration" class="lightbox-img">
+								<div class="image-overlay">
+									<button class="view-image-btn">View</button>
+								</div>
+							</div>
+							<div class="gallery-image">
+								<img src="images/science_fair/WhatsApp Image 2025-03-29 at 11.30.16 AM.jpeg" alt="Judges Evaluation" class="lightbox-img">
+								<div class="image-overlay">
+									<button class="view-image-btn">View</button>
+								</div>
+							</div>
+							<div class="gallery-image">
+								<img src="images/science_fair/WhatsApp Image 2025-03-29 at 11.30.18 AM.jpeg" alt="Science Projects" class="lightbox-img">
+								<div class="image-overlay">
+									<button class="view-image-btn">View</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Lightbox Modal -->
+				<div id="lightbox-modal" class="lightbox-modal">
+					<span class="lightbox-close">&times;</span>
+					<img class="lightbox-content" id="lightbox-img">
+					<div id="lightbox-caption"></div>
+				</div>
+				
+				<div class="gallery-cta-container">
+					<a href="gallery.html" class="vah-gs-btn"><i class="mdi mdi-image-multiple"></i>&nbsp;View Full Gallery</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Generated code for activity section -->
+
 		<!-- Generated code for activity section -->
 		<!-- Section: School Activities -->
 		<section class="vah-section ssm-activities">
@@ -855,6 +971,120 @@
 				$(this).addClass('active');
 				$(`#${tab}`).addClass('active');
 			});
+			
+			// // Lightbox functionality
+			// const modal = document.getElementById('lightbox-modal');
+			// const modalImg = document.getElementById('lightbox-img');
+			// const captionText = document.getElementById('lightbox-caption');
+			// const closeBtn = document.getElementsByClassName('lightbox-close')[0];
+			
+			// // Open lightbox when clicking on the view button
+			// $('.view-image-btn').on('click', function() {
+			//     const img = $(this).closest('.gallery-image').find('.lightbox-img')[0];
+			//     modal.style.display = "block";
+			//     modalImg.src = img.src;
+			//     captionText.innerHTML = img.alt;
+			// });
+			
+			// // Close lightbox when clicking on the close button
+			// closeBtn.onclick = function() {
+			//     modal.style.display = "none";
+			// }
+			
+			// // Close lightbox when clicking outside the image
+			// $(modal).on('click', function(event) {
+			//     if (event.target === modal) {
+			//         modal.style.display = "none";
+			//     }
+			// });
+
+
+			// Lightbox functionality
+			const modal = document.getElementById('lightbox-modal');
+			const modalImg = document.getElementById('lightbox-img');
+			const captionText = document.getElementById('lightbox-caption');
+			const closeBtn = document.getElementsByClassName('lightbox-close')[0];
+			let currentImageIndex = 0;
+			let galleryImages = [];
+
+			// Open lightbox when clicking on the view button
+			$('.view-image-btn').on('click', function() {
+				// Get all images in the current category
+				const currentCategory = $(this).closest('.event-category');
+				galleryImages = currentCategory.find('.lightbox-img').toArray();
+				
+				// Find the index of the clicked image
+				const clickedImg = $(this).closest('.gallery-image').find('.lightbox-img')[0];
+				currentImageIndex = galleryImages.findIndex(img => img === clickedImg);
+				
+				// Display the image
+				showImage(currentImageIndex);
+			});
+
+			// Function to show image at specific index
+			function showImage(index) {
+				if (galleryImages.length === 0) return;
+				
+				// Ensure index is within bounds
+				if (index < 0) index = galleryImages.length - 1;
+				if (index >= galleryImages.length) index = 0;
+				
+				currentImageIndex = index;
+				modal.style.display = "block";
+				modalImg.src = galleryImages[currentImageIndex].src;
+				captionText.innerHTML = galleryImages[currentImageIndex].alt;
+			}
+
+			// Navigate to previous image
+			function prevImage() {
+				showImage(currentImageIndex - 1);
+			}
+
+			// Navigate to next image
+			function nextImage() {
+				showImage(currentImageIndex + 1);
+			}
+
+			// Add navigation buttons to the lightbox
+			const navButtons = `
+				<div class="lightbox-nav">
+					<button class="lightbox-prev"><i class="mdi mdi-chevron-left"></i></button>
+					<button class="lightbox-next"><i class="mdi mdi-chevron-right"></i></button>
+				</div>
+			`;
+			$(modal).append(navButtons);
+
+			// Click events for navigation buttons
+			$('.lightbox-prev').on('click', prevImage);
+			$('.lightbox-next').on('click', nextImage);
+
+			// Close lightbox when clicking on the close button
+			closeBtn.onclick = function() {
+				modal.style.display = "none";
+			}
+
+			// Close lightbox when clicking outside the image
+			$(modal).on('click', function(event) {
+				if (event.target === modal) {
+					modal.style.display = "none";
+				}
+			});
+
+			// Keyboard navigation
+			$(document).keydown(function(e) {
+				if (modal.style.display === "block") {
+					if (e.keyCode === 37) { // Left arrow key
+						prevImage();
+					} else if (e.keyCode === 39) { // Right arrow key
+						nextImage();
+					} else if (e.keyCode === 27) { // Escape key
+						modal.style.display = "none";
+					}
+				}
+			});
+
+
+
 		});
 	</script>
 </body>
