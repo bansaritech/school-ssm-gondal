@@ -48,7 +48,7 @@
 	<!-- Vah Theme Content Start -->
 	<div class="vah-theme" style="display: none;">
 		<!-- Header / Hero Unit -->
-		<header class="vah-header">
+		<header>
 			<!-- Navbar / Menu bar -->
 			<div class="ssm-logo-container">
 				<div class="container flex">
@@ -169,10 +169,8 @@
 		<!-- Page Title Section -->
 		<section class="vah-section donation-title-section">
 			<div class="vah-section-padding container">
-				<h1 class="vah-heading">Support Our <strong class="vah-primary-clr">School</strong></h1>
-				<div class="donation-subtitle">
-					<p>Your contribution makes a significant difference in the lives of our students</p>
-				</div>
+				<h1 class="vah-heading">Support Our <strong style="color: #f96f03;">School</strong></h1>
+				<p class="vah-text text-center">Your contribution makes a significant difference in the lives of our students</p>
 			</div>
 		</section>
 
@@ -187,118 +185,143 @@
 					</div>
 
 					<!-- Donation Categories -->
-					<div class="donation-categories">
-						<h2 class="vah-title">Donation Opportunities</h2>
-						<div class="donation-category-grid">
-							<!-- Infrastructure Development -->
-							<div class="donation-category-card">
-								<div class="category-icon">
-									<i class="mdi mdi-domain"></i>
-								</div>
-								<h3>Infrastructure Development</h3>
-								<ul class="donation-category-list">
-									<li>Classroom construction and renovation</li>
-									<li>Laboratory equipment and upgrades</li>
-									<li>Library expansion and resources</li>
-									<li>Sports facilities and playground equipment</li>
-									<li>Computer lab and digital learning tools</li>
-								</ul>
-								<div class="suggested-amount">
-									<span>Suggested donation: ₹25,000 and above</span>
-								</div>
+					<div class="donation-category-grid hide">
+						<!-- Saraswati Shishu Mandir -->
+						<div class="donation-category-card">
+							<div class="category-icon">
+								<i class="mdi mdi-school"></i>
 							</div>
-
-							<!-- Scholarship Fund -->
-							<div class="donation-category-card">
-								<div class="category-icon">
-									<i class="mdi mdi-school"></i>
-								</div>
-								<h3>Scholarship Fund</h3>
-								<ul class="donation-category-list">
-									<li>Merit scholarships for outstanding students</li>
-									<li>Need-based financial assistance</li>
-									<li>Special education support</li>
-									<li>Books and educational materials</li>
-									<li>Uniform and transportation assistance</li>
-								</ul>
-								<div class="suggested-amount">
-									<span>Suggested donation: ₹10,000 and above</span>
-								</div>
+							<h3>Saraswati Shishu Mandir</h3>
+							<div class="donation-amount">₹51,00,000/-</div>
+							<a href="#" class="donation-btn" data-category="Saraswati Shishu Mandir">Donate Now</a>
+						</div>
+						
+						<!-- Primary School -->
+						<div class="donation-category-card">
+							<div class="category-icon">
+								<i class="mdi mdi-human-child"></i>
 							</div>
-
-							<!-- Technology Enhancement -->
-							<div class="donation-category-card">
-								<div class="category-icon">
-									<i class="mdi mdi-laptop"></i>
-								</div>
-								<h3>Technology Enhancement</h3>
-								<ul class="donation-category-list">
-									<li>Smart classroom equipment</li>
-									<li>Computers and tablets for students</li>
-									<li>Educational software and subscriptions</li>
-									<li>Internet connectivity improvements</li>
-									<li>Digital library resources</li>
-								</ul>
-								<div class="suggested-amount">
-									<span>Suggested donation: ₹15,000 and above</span>
-								</div>
+							<h3>Primary School</h3>
+							<div class="donation-amount">₹51,00,000/-</div>
+							<a href="#" class="donation-btn" data-category="Primary School">Donate Now</a>
+						</div>
+						
+						<!-- Secondary School -->
+						<div class="donation-category-card">
+							<div class="category-icon">
+								<i class="mdi mdi-account-group"></i>
 							</div>
-
-							<!-- Teacher Development -->
-							<div class="donation-category-card">
-								<div class="category-icon">
-									<i class="mdi mdi-teach"></i>
-								</div>
-								<h3>Teacher Development</h3>
-								<ul class="donation-category-list">
-									<li>Professional training programs</li>
-									<li>Educational workshops and seminars</li>
-									<li>Research and innovation grants</li>
-									<li>Teaching resources and materials</li>
-									<li>Exchange programs and exposure visits</li>
-								</ul>
-								<div class="suggested-amount">
-									<span>Suggested donation: ₹20,000 and above</span>
-								</div>
+							<h3>Secondary School</h3>
+							<div class="donation-amount">₹51,00,000/-</div>
+							<a href="#" class="donation-btn" data-category="Secondary School">Donate Now</a>
+						</div>
+						
+						<!-- Prayer Hall -->
+						<div class="donation-category-card">
+							<div class="category-icon">
+								<i class="mdi mdi-meditation"></i>
 							</div>
-
-							<!-- Cultural & Extracurricular -->
-							<div class="donation-category-card">
-								<div class="category-icon">
-									<i class="mdi mdi-palette"></i>
-								</div>
-								<h3>Cultural & Extracurricular</h3>
-								<ul class="donation-category-list">
-									<li>Musical instruments and equipment</li>
-									<li>Art supplies and facilities</li>
-									<li>Cultural event sponsorships</li>
-									<li>Sports equipment and coaching</li>
-									<li>Educational tours and field trips</li>
-								</ul>
-								<div class="suggested-amount">
-									<span>Suggested donation: ₹5,000 and above</span>
-								</div>
+							<h3>Prayer Hall</h3>
+							<div class="donation-amount">₹21,00,000/-</div>
+							<a href="#" class="donation-btn" data-category="Prayer Hall">Donate Now</a>
+						</div>
+						
+						<!-- Physics Lab -->
+						<div class="donation-category-card">
+							<div class="category-icon">
+								<i class="mdi mdi-atom"></i>
 							</div>
-
-							<!-- General Fund -->
-							<div class="donation-category-card">
-								<div class="category-icon">
-									<i class="mdi mdi-heart"></i>
-								</div>
-								<h3>General Fund</h3>
-								<ul class="donation-category-list">
-									<li>Unrestricted donations for school's greatest needs</li>
-									<li>Operational support and maintenance</li>
-									<li>Emergency assistance fund</li>
-									<li>Community outreach programs</li>
-									<li>Health and wellness initiatives</li>
-								</ul>
-								<div class="suggested-amount">
-									<span>Any amount is appreciated</span>
-								</div>
+							<h3>Physics Laboratory</h3>
+							<div class="donation-amount">₹7,00,000/-</div>
+							<a href="#" class="donation-btn" data-category="Physics Lab">Donate Now</a>
+						</div>
+						
+						<!-- Chemistry Lab -->
+						<div class="donation-category-card">
+							<div class="category-icon">
+								<i class="mdi mdi-flask"></i>
 							</div>
+							<h3>Chemistry Laboratory</h3>
+							<div class="donation-amount">₹7,00,000/-</div>
+							<a href="#" class="donation-btn" data-category="Chemistry Lab">Donate Now</a>
+						</div>
+						
+						<!-- Biology Lab -->
+						<div class="donation-category-card">
+							<div class="category-icon">
+								<i class="mdi mdi-microscope"></i>
+							</div>
+							<h3>Biology Laboratory</h3>
+							<div class="donation-amount">₹7,00,000/-</div>
+							<a href="#" class="donation-btn" data-category="Biology Lab">Donate Now</a>
+						</div>
+						
+						<!-- Computer Lab 1 -->
+						<div class="donation-category-card">
+							<div class="category-icon">
+								<i class="mdi mdi-desktop-classic"></i>
+							</div>
+							<h3>Computer Laboratory 1</h3>
+							<div class="donation-amount">₹10,00,000/-</div>
+							<a href="#" class="donation-btn" data-category="Computer Lab 1">Donate Now</a>
+						</div>
+						
+						<!-- Computer Lab 2 -->
+						<div class="donation-category-card">
+							<div class="category-icon">
+								<i class="mdi mdi-laptop"></i>
+							</div>
+							<h3>Computer Laboratory 2</h3>
+							<div class="donation-amount">₹10,00,000/-</div>
+							<a href="#" class="donation-btn" data-category="Computer Lab 2">Donate Now</a>
+						</div>
+						
+						<!-- Library -->
+						<div class="donation-category-card">
+							<div class="category-icon">
+								<i class="mdi mdi-bookshelf"></i>
+							</div>
+							<h3>Library</h3>
+							<div class="donation-amount">₹10,00,000/-</div>
+							<a href="#" class="donation-btn" data-category="Library">Donate Now</a>
+						</div>
+						
+						<!-- Yoga Class -->
+						<div class="donation-category-card">
+							<div class="category-icon">
+								<i class="mdi mdi-yoga"></i>
+							</div>
+							<h3>Yoga Class</h3>
+							<div class="donation-amount">₹5,00,000/-</div>
+							<a href="#" class="donation-btn" data-category="Yoga Class">Donate Now</a>
+						</div>
+						
+						<!-- Music Class -->
+						<div class="donation-category-card">
+							<div class="category-icon">
+								<i class="mdi mdi-music"></i>
+							</div>
+							<h3>Music Class</h3>
+							<div class="donation-amount">₹5,00,000/-</div>
+							<a href="#" class="donation-btn" data-category="Music Class">Donate Now</a>
+						</div>
+						
+						<!-- Indoor Game -->
+						<div class="donation-category-card">
+							<div class="category-icon">
+								<i class="mdi mdi-table-tennis"></i>
+							</div>
+							<h3>Indoor Game</h3>
+							<div class="donation-amount">₹5,00,000/-</div>
+							<a href="#" class="donation-btn" data-category="Indoor Game">Donate Now</a>
 						</div>
 					</div>
+
+
+					<!-- New list display here -->
+
+
+
 
 					<!-- Bank Details Section -->
 					<div class="donation-bank-details">
@@ -386,6 +409,8 @@
 			</div>
 		</section>
 
+
+		
 		<!-- Footer -->
 		<footer class="footer">
 			<div class="main-footer">
@@ -500,5 +525,66 @@
 	<!-- Main Template JS -->
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/donation.js"></script>
+
+	<!-- Donation Modal -->
+	<div id="donation-modal" class="donation-modal">
+	    <div class="donation-modal-content">
+	        <span class="donation-modal-close">&times;</span>
+	        <h2>Make a Donation</h2>
+	        
+	        <form id="donation-form" class="donation-form">
+	            <div class="form-group">
+	                <label for="donor-name">Full Name*</label>
+	                <input type="text" id="donor-name" name="donor-name" required>
+	            </div>
+	            
+	            <div class="form-group">
+	                <label for="donor-email">Email Address*</label>
+	                <input type="email" id="donor-email" name="donor-email" required>
+	            </div>
+	            
+	            <div class="form-group">
+	                <label for="donor-phone">Phone Number*</label>
+	                <input type="tel" id="donor-phone" name="donor-phone" required>
+	            </div>
+	            
+	            <div class="form-group">
+	                <label for="donor-pan">PAN Number (for tax benefits)</label>
+	                <input type="text" id="donor-pan" name="donor-pan">
+	            </div>
+	            
+	            <div class="form-group">
+	                <label for="donation-category">Donation Category*</label>
+	                <select id="donation-category" name="donation-category" required>
+	                    <option value="">Select a category</option>
+	                    <option value="infrastructure">Infrastructure Development</option>
+	                    <option value="scholarship">Scholarship Fund</option>
+	                    <option value="technology">Technology Enhancement</option>
+	                    <option value="teacher">Teacher Development</option>
+	                    <option value="cultural">Cultural & Extracurricular</option>
+	                    <option value="general">General Fund</option>
+	                </select>
+	            </div>
+	            
+	            <div class="form-group">
+	                <label for="donation-amount">Donation Amount (₹)*</label>
+	                <input type="number" id="donation-amount" name="donation-amount" min="100" required>
+	            </div>
+	            
+	            <div class="form-group">
+	                <label for="donation-message">Message (Optional)</label>
+	                <textarea id="donation-message" name="donation-message" rows="3"></textarea>
+	            </div>
+	            
+	            <div class="form-group form-checkbox">
+	                <input type="checkbox" id="terms-agree" name="terms-agree" required>
+	                <label for="terms-agree">I agree to the terms and conditions</label>
+	            </div>
+	            
+	            <button type="submit" class="donation-submit-btn">Submit Donation</button>
+	        </form>
+	    </div>
+	</div>
 </body>
 </html>
+
