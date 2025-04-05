@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Under Construction - Shree Saraswati Shishu Mandir, Gondal</title>
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="stylesheet" href="assets/icons/material-design-icons/css/materialdesignicons.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/vah.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style-skin2.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/ssm.css">
+    <style>
+        .construction-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .construction-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .construction-icon {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 30px;
+        }
+
+        .gear-animation {
+            position: absolute;
+            font-size: 80px;
+            color: #f96f03;
+            animation: spin 8s linear infinite;
+        }
+
+        .gear-1 { top: 0; left: 30px; }
+        .gear-2 { top: 60px; right: 30px; animation-direction: reverse; }
+        .gear-3 { bottom: 0; left: 50%; transform: translateX(-50%); }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .construction-title {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .construction-text {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .progress-container {
+            width: 80%;
+            max-width: 400px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 30px;
+            padding: 5px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .progress-bar {
+            width: 75%;
+            height: 20px;
+            background: linear-gradient(90deg, #f96f03, #ffc107);
+            border-radius: 30px;
+            position: relative;
+            animation: progress 2s ease-in-out infinite;
+        }
+
+        @keyframes progress {
+            0% { width: 65%; }
+            50% { width: 85%; }
+            100% { width: 65%; }
+        }
+
+        .back-home {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #f96f03;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .back-home:hover {
+            background: #e65d00;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(249, 111, 3, 0.4);
+        }
+
+        .tools-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .tool {
+            font-size: 24px;
+            color: #666;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .tool:nth-child(2) { animation-delay: 0.2s; }
+        .tool:nth-child(3) { animation-delay: 0.4s; }
+        .tool:nth-child(4) { animation-delay: 0.6s; }
+    </style>
+</head>
+
+<body>
+    <div class="construction-container">
+        <div class="construction-content">
+            
+            <h1 class="construction-title">We're Building Something Amazing!</h1>
+            <p class="construction-text">Our team is working hard to bring you an enhanced educational experience. This page will be ready soon with exciting new content.</p>
+            
+            <div class="tools-container">
+                <i class="mdi mdi-school tool"></i>
+                <i class="mdi mdi-book-open-page-variant tool"></i>
+                <i class="mdi mdi-pencil tool"></i>
+                <i class="mdi mdi-palette tool"></i>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+            
+            <a href="/" class="back-home">
+                <i class="mdi mdi-home"></i> Back to Home
+            </a>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+</body>
+</html>
