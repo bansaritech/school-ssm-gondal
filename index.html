@@ -61,10 +61,10 @@
 					<img class="logo vb" src="images/vidhya-bharti.png" alt="Vidya Bharti - Logo">
 					<div class="ssm-vb-title">
 						<div>
-							Affilieted with
+							<span>A</span>ffilieted with
 						</div>
 						<div>
-							Vidya Bharti
+							<span>V</span>idya Bharti
 						</div>
 					</div>
 					<!-- 
@@ -422,7 +422,7 @@
 		    <div class="vah-section-padding container">
 		        <div class="new-building-wrapper">
 		            <div class="new-building-content">
-		                <h2 class="vah-heading">Our <strong class="vah-primary-clr">New Campus</strong></h2>
+		                <h2 class="vah-heading">Our <strong class="vah-primary-light-clr">New Campus</strong></h2>
 		                <p class="new-building-desc">We are excited to announce our state-of-the-art new campus building, designed to provide an optimal learning environment for our students. The new facility features modern classrooms, advanced laboratories, and spacious recreational areas.</p>
 		                <ul class="new-building-features">
 		                    <li>Modern infrastructure with smart classrooms</li>
@@ -840,7 +840,7 @@
 					<div class="row gutters">
 						<!-- Footer Column 1: -->
 						<div class="col-ms-4 col-ss-6">
-							<h2 class="vah-logo">Affilieted with</h2>
+							<h2 class="vah-footer-title">Affilieted with</h2>
 							<div class="clearfix"></div><br />
 							<div class="flex">
 								<img class="logo vb" src="images/vidhya-bharti.png" alt="Vidya Bharti - Logo">
@@ -947,12 +947,15 @@
 					<div class="row">
 						<div class="pull-left mob-f-none">
 							<!-- Copy right -->
-							<label class="vah-footer-lbl">&copy; 2016. All Rights Reserved.</label>
+							<label class="vah-footer-lbl">&copy; <span id="ssm-year"></span>. All Rights Reserved.</label>
 						</div>
 						<div class="pull-right mob-f-none">
 							<!-- Credit -->
-							<label class="vah-footer-lbl">Crafted with <strong><i class="mdi mdi-heart"></i> by BansariTech
-									:)</strong></label>
+							<label class="vah-footer-lbl">
+								Crafted with
+								<strong class="emoji"><i class="mdi mdi-heart"></i></strong>
+								by <strong class="dev-comp"><a href="https://bansaritech.in/">BansariTech</a></strong>
+							</label>
 						</div>
 					</div>
 				</div>
@@ -969,6 +972,9 @@
 	<!-- Initialize vah carousel -->
 	<script>
 		$(document).ready(function() {
+
+			$("#ssm-year").text(new Date().getFullYear())
+
 			// Code for slider
 			$("#vah-slider").vahSlider({
 				in: 'animated fadeIn',

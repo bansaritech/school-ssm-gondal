@@ -1,7 +1,9 @@
 :root {
     --logo-container-height: 130px;
     font-family: 'Mulish', sans-serif;
-
+    --primary-color: #2f3082;
+    --primary-lightblue-color: #2c79f4;
+    --primary-orange-color: #f96f03;
 }
 
 .ssm-logo-container .container,
@@ -9,7 +11,10 @@
     max-height: var(--logo-container-height);
 }
 
-
+.vah-primary-clr {
+    color: var(--primary-color, #2c79f4);
+  }
+  
 .ssm-logo-container {
     transition: background 1s ease-in-out;
     height: var(--logo-container-height);
@@ -42,11 +47,16 @@ section.ssm-event-gallery {
     display: flex;
 }
 
+.ssm-vb-title span {
+    color: #f96f03;
+}
+
 .ssm-vb-title {
     margin: auto 10px;
     font-size: larger;
     font-family: sans-serif;
     font-weight: 800;
+    color: #2f3082;
 }
 
 .ssm-logo-container .container img.logo.vb {
@@ -93,6 +103,10 @@ footer.footer .main-footer .vah-footer-social {
 }
 */
 
+.contact-info svg {
+    color: #f96f03;
+}
+
 .contact-info {
     display: flex;
     flex-direction: column;
@@ -100,6 +114,7 @@ footer.footer .main-footer .vah-footer-social {
     margin: auto;
     text-align: right;
     gap: 12px;
+    color: #2f3082;
 }
 
 .contact-info.slogan {
@@ -994,4 +1009,21 @@ header.vah-header {
   }
   
 
-  
+.cr-footer .vah-footer-lbl {
+    color: #aaa;
+}
+
+.vah-primary-light-clr {
+    color: var(--primary-lightblue-color, #2c79f4);
+}
+
+
+.cr-footer .vah-footer-lbl .dev-comp a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.cr-footer .vah-footer-lbl .emoji {
+    font-size: 20px;
+    color: var(--primary-orange-color);
+}
