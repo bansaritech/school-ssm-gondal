@@ -1,19 +1,24 @@
 /* Donation Page Styling */
 .donation-title-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/activities/donation/bg.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/donation-banner.jpg');
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 100px 0 80px;
+    padding: 50px 0 80px;
     text-align: center;
     position: relative;
 }
-
 .donation-title-section .vah-heading {
     color: white;
+}
+
+.donation-title-section  .vah-text {
+    color: #aaa;
+}
+
+.donation-title-section .vah-heading {
     font-size: 42px;
     margin-bottom: 20px;
-    /* text-shadow: 0 2px 4px rgba(0,0,0,0.3); */
 }
 
 .donation-title-section .vah-heading strong {
@@ -22,22 +27,9 @@
     display: inline-block;
 }
 
-.donation-title-section .vah-heading strong:after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: #f96f03;
-    border-radius: 2px;
-}
-
 .donation-title-section .vah-text {
     font-size: 18px;
     max-width: 700px;
-    font-weight: 300;
-    color: #bebebe;
     margin: 0 auto;
     line-height: 1.6;
 }
@@ -231,6 +223,10 @@
     border-radius: 10px;
 }
 
+.donation-bank-section .container {
+    max-width: 700px;
+}
+
 .bank-details-card {
     background: white;
     border-radius: 10px;
@@ -240,7 +236,7 @@
 
 .bank-details-content {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 20px;
 }
 
@@ -252,12 +248,14 @@
 
 .detail-label {
     font-weight: 600;
-    color: #333;
+    color: #ddd;
     margin-bottom: 5px;
+    /* text-align: center; */
 }
 
 .detail-value {
-    color: #555;
+    color: #aaa;
+    /* text-align: center; */
 }
 
 .bank-note {
@@ -268,19 +266,21 @@
     border-radius: 0 4px 4px 0;
 }
 
-/* Tax Benefit Section */
-.donation-tax-benefit {
-    margin-bottom: 60px;
+/* Enhanced Tax Benefits Section */
+.donation-tax-section {
+    background: #fff;
+    padding: 60px 0;
 }
 
-.tax-benefit-card {
+.tax-benefits-card {
     display: flex;
-    align-items: flex-start;
-    gap: 30px;
     background: white;
     border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    padding: 40px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    max-width: 900px;
+    margin: 30px auto 0;
+    align-items: flex-start;
 }
 
 .tax-icon {
@@ -291,6 +291,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 30px;
 }
 
 .tax-icon i {
@@ -298,20 +299,144 @@
     color: white;
 }
 
-.tax-content {
+.tax-details {
     flex: 1;
 }
 
-.tax-content h3 {
+.tax-details h3 {
     color: #333;
     margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.tax-details > p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.tax-benefits-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.tax-highlight-item {
+    flex: 1 0 calc(33.33% - 15px);
+    min-width: 200px;
+    display: flex;
+    align-items: flex-start;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.tax-highlight-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.highlight-icon {
+    flex: 0 0 40px;
+    height: 40px;
+    background: #f96f03;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.highlight-icon i {
+    font-size: 20px;
+    color: white;
+}
+
+.highlight-content {
+    flex: 1;
+}
+
+.highlight-content h4 {
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 16px;
     font-weight: 600;
 }
 
-.tax-content p {
-    color: #555;
-    line-height: 1.7;
+.highlight-content p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.tax-process {
+    margin-top: 30px;
+    background: #fff8e1;
+    border-radius: 8px;
+    padding: 20px 25px;
+}
+
+.tax-process h4 {
+    color: #333;
     margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.tax-process-steps {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.tax-process-steps li {
+    color: #555;
+    padding: 8px 0;
+    position: relative;
+}
+
+.tax-note {
+    /* max-width: 900px; */
+    margin: 20px auto 0;
+    padding: 15px 20px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    color: #555;
+    border-left: 4px solid #f96f03;
+}
+
+.tax-note i {
+    color: #f96f03;
+    margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+    .tax-benefits-card {
+        flex-direction: column;
+        padding: 30px;
+    }
+    
+    .tax-icon {
+        margin: 0 auto 20px;
+    }
+    
+    .tax-details {
+        text-align: center;
+    }
+    
+    .tax-benefits-highlights {
+        justify-content: center;
+    }
+    
+    .tax-highlight-item {
+        flex: 0 0 100%;
+    }
+    
+    .tax-process {
+        text-align: left;
+    }
 }
 
 .tax-note {
@@ -541,20 +666,37 @@
 
 /* Donation List Styling */
 .donation-opportunities {
-    margin-bottom: 60px;
+    /* margin-bottom: 60px; */
+}
+
+.donation-why-section .separation-bar {
+    /* background: #2c79f4; */
+    height: 5px;
+    margin-bottom: 45px;
+    background: -webkit-linear-gradient(left, #f96f03, #595aea);
+    background: -moz-linear-gradient(left, #f96f03, #595aea);
+    background: linear-gradient(left, #f96f03, #595aea); 
+}
+
+.donation-opportunities .vah-title {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .donation-list-container {
     margin-top: 40px;
     overflow-x: auto;
+    /* text-align: center; */
 }
 
 .donation-table {
-    width: 100%;
+    /* width: 100%; */
     border-collapse: collapse;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.8);
     border-radius: 10px;
     overflow: hidden;
+    outline: 3px solid #ddd;
+    margin: 20px auto;
 }
 
 .donation-table thead {
@@ -577,8 +719,13 @@
     background-color: #f8f9fa;
 }
 
+.donation-table tbody tr:hover td i {
+    color: white;
+}
+
 .donation-table tbody tr:hover {
-    background-color: #fff8e1;
+    background-color: var(--primary-lightblue-color);
+    color: white;
 }
 
 .donation-table td {
@@ -635,3 +782,18 @@
         font-size: 13px;
     }
 }
+
+.dark-title-highlight {
+    color: var(--primary-lightblue-color, #2c79f4);
+}
+
+.donation-bank-section {
+    background: #333;
+    color: white;
+    padding: 30px 0;
+    position: relative;
+}
+
+
+
+/* .bank-details-content .content-row .bank-detail-row */

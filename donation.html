@@ -49,19 +49,23 @@
 	<div class="vah-theme" style="display: none;">
 		<!-- Header / Hero Unit -->
 		<header>
-			<!-- Navbar / Menu bar -->
 			<div class="ssm-logo-container">
 				<div class="container flex">
 					<img class="logo ssm" src="images/ssm-gondal-cropped.jpg" alt="Saraswati Shishu Mandir - Logo">
 					<img class="logo vb" src="images/vidhya-bharti.png" alt="Vidya Bharti - Logo">
 					<div class="ssm-vb-title">
 						<div>
-							Affilieted with
+							<span>A</span>ffilieted with
 						</div>
 						<div>
-							Vidya Bharti
+							<span>V</span>idya Bharti
 						</div>
 					</div>
+					<!-- 
+					<div class="contact-info slogan">
+						।। सा विद्या या विमुक्तये ।।
+					</div>
+					 -->
 					<div class="contact-info">
 						<div>
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="ssm-icon size-6">
@@ -77,16 +81,22 @@
 								<path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
 							</svg>
 							<span class="txt">
-								info@ssmgondal.org
+								gondalssmv@yahoo.in
 							</span>
 						</div>
 					</div>
 				</div>
 			</div>
 			
+			<!-- Navbar / Menu bar -->
 			<nav class="vah-navbar vah-navbar-stick vah-navbar-fixed" id="navbar">
 				<div class="container vah-navbar-container">
 					<div class="vah-logo-v-center">
+						<!--					
+						<a href="index.html">
+							<h1 class="vah-logo"> Vah :)</h1>
+						</a>
+						-->
 						<!-- Toggle Menu Button -->
 						<div class="toggle-menu-icon" id="menu-toggle-btn">
 							<button><i class="mdi mdi-menu"></i></button>
@@ -97,7 +107,7 @@
 					<div class="main-menu pull-right mob-f-none" id="menu">
 						<!-- Menu List -->
 						<ul class="menu-items menu-underline submenu-scale">
-							<li><a href="index.html">Home</a></li>
+							<li class="active"><a href="index.html">Home</a></li>
 							<li class="mega-menu mega-1-column">
 								<a>About Us&nbsp;&nbsp;<i class="mdi mdi-chevron-down"></i></a>
 								<ul class="submenu mob-submenu">
@@ -153,7 +163,7 @@
 									</li>
 								</ul>
 							</li>
-							<li class="active"><a href="donation.html">Donation</a></li>
+							<li><a href="donation.html">Donation</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 						<!-- End Menu List -->
@@ -174,242 +184,180 @@
 			</div>
 		</section>
 
-		<!-- Donation Information Section -->
-		<section class="vah-section donation-info-section">
-			<div class="vah-section-padding container">
-				<div class="donation-info-wrapper">
-					<div class="donation-intro">
-						<h2 class="vah-title">Why Your Support Matters</h2>
-						<p>At Shree Saraswati Shishu Mandir, we believe that quality education should be accessible to all deserving students. Your generous donations help us maintain and improve our educational facilities, and enhance the overall learning experience.</p>
-					</div>
-
-					<!-- Donation Categories -->
-					<div class="donation-category-grid hide">
-						<!-- Saraswati Shishu Mandir -->
-						<div class="donation-category-card">
-							<div class="category-icon">
-								<i class="mdi mdi-school"></i>
-							</div>
-							<h3>Saraswati Shishu Mandir</h3>
-							<div class="donation-amount">₹51,00,000/-</div>
-							<a href="#" class="donation-btn" data-category="Saraswati Shishu Mandir">Donate Now</a>
-						</div>
-						
-						<!-- Primary School -->
-						<div class="donation-category-card">
-							<div class="category-icon">
-								<i class="mdi mdi-human-child"></i>
-							</div>
-							<h3>Primary School</h3>
-							<div class="donation-amount">₹51,00,000/-</div>
-							<a href="#" class="donation-btn" data-category="Primary School">Donate Now</a>
-						</div>
-						
-						<!-- Secondary School -->
-						<div class="donation-category-card">
-							<div class="category-icon">
-								<i class="mdi mdi-account-group"></i>
-							</div>
-							<h3>Secondary School</h3>
-							<div class="donation-amount">₹51,00,000/-</div>
-							<a href="#" class="donation-btn" data-category="Secondary School">Donate Now</a>
-						</div>
-						
-						<!-- Prayer Hall -->
-						<div class="donation-category-card">
-							<div class="category-icon">
-								<i class="mdi mdi-meditation"></i>
-							</div>
-							<h3>Prayer Hall</h3>
-							<div class="donation-amount">₹21,00,000/-</div>
-							<a href="#" class="donation-btn" data-category="Prayer Hall">Donate Now</a>
-						</div>
-						
-						<!-- Physics Lab -->
-						<div class="donation-category-card">
-							<div class="category-icon">
-								<i class="mdi mdi-atom"></i>
-							</div>
-							<h3>Physics Laboratory</h3>
-							<div class="donation-amount">₹7,00,000/-</div>
-							<a href="#" class="donation-btn" data-category="Physics Lab">Donate Now</a>
-						</div>
-						
-						<!-- Chemistry Lab -->
-						<div class="donation-category-card">
-							<div class="category-icon">
-								<i class="mdi mdi-flask"></i>
-							</div>
-							<h3>Chemistry Laboratory</h3>
-							<div class="donation-amount">₹7,00,000/-</div>
-							<a href="#" class="donation-btn" data-category="Chemistry Lab">Donate Now</a>
-						</div>
-						
-						<!-- Biology Lab -->
-						<div class="donation-category-card">
-							<div class="category-icon">
-								<i class="mdi mdi-microscope"></i>
-							</div>
-							<h3>Biology Laboratory</h3>
-							<div class="donation-amount">₹7,00,000/-</div>
-							<a href="#" class="donation-btn" data-category="Biology Lab">Donate Now</a>
-						</div>
-						
-						<!-- Computer Lab 1 -->
-						<div class="donation-category-card">
-							<div class="category-icon">
-								<i class="mdi mdi-desktop-classic"></i>
-							</div>
-							<h3>Computer Laboratory 1</h3>
-							<div class="donation-amount">₹10,00,000/-</div>
-							<a href="#" class="donation-btn" data-category="Computer Lab 1">Donate Now</a>
-						</div>
-						
-						<!-- Computer Lab 2 -->
-						<div class="donation-category-card">
-							<div class="category-icon">
-								<i class="mdi mdi-laptop"></i>
-							</div>
-							<h3>Computer Laboratory 2</h3>
-							<div class="donation-amount">₹10,00,000/-</div>
-							<a href="#" class="donation-btn" data-category="Computer Lab 2">Donate Now</a>
-						</div>
-						
-						<!-- Library -->
-						<div class="donation-category-card">
-							<div class="category-icon">
-								<i class="mdi mdi-bookshelf"></i>
-							</div>
-							<h3>Library</h3>
-							<div class="donation-amount">₹10,00,000/-</div>
-							<a href="#" class="donation-btn" data-category="Library">Donate Now</a>
-						</div>
-						
-						<!-- Yoga Class -->
-						<div class="donation-category-card">
-							<div class="category-icon">
-								<i class="mdi mdi-yoga"></i>
-							</div>
-							<h3>Yoga Class</h3>
-							<div class="donation-amount">₹5,00,000/-</div>
-							<a href="#" class="donation-btn" data-category="Yoga Class">Donate Now</a>
-						</div>
-						
-						<!-- Music Class -->
-						<div class="donation-category-card">
-							<div class="category-icon">
-								<i class="mdi mdi-music"></i>
-							</div>
-							<h3>Music Class</h3>
-							<div class="donation-amount">₹5,00,000/-</div>
-							<a href="#" class="donation-btn" data-category="Music Class">Donate Now</a>
-						</div>
-						
-						<!-- Indoor Game -->
-						<div class="donation-category-card">
-							<div class="category-icon">
-								<i class="mdi mdi-table-tennis"></i>
-							</div>
-							<h3>Indoor Game</h3>
-							<div class="donation-amount">₹5,00,000/-</div>
-							<a href="#" class="donation-btn" data-category="Indoor Game">Donate Now</a>
-						</div>
-					</div>
-
-
-					<!-- New list display here -->
-
-
-
-
-					<!-- Bank Details Section -->
-					<div class="donation-bank-details">
-						<h2 class="vah-title">Bank Details for Donation</h2>
-						<div class="bank-details-card">
-							<div class="bank-details-content">
-								<div class="bank-detail-row">
-									<span class="detail-label">Account Name:</span>
-									<span class="detail-value">Bhartiya Sanskruti Pratisthan</span>
-								</div>
-								<div class="bank-detail-row">
-									<span class="detail-label">Bank Name:</span>
-									<span class="detail-value">ICICI Bank</span>
-								</div>
-								<div class="bank-detail-row">
-									<span class="detail-label">Branch:</span>
-									<span class="detail-value">Gondal, Gujarat</span>
-								</div>
-								<div class="bank-detail-row">
-									<span class="detail-label">Account Number:</span>
-									<span class="detail-value">048605008425</span>
-								</div>
-								<div class="bank-detail-row">
-									<span class="detail-label">IFSC Code:</span>
-									<span class="detail-value">ICIC0000486</span>
-								</div>
-								<div class="bank-detail-row">
-									<span class="detail-label">Account Type:</span>
-									<span class="detail-value">Savings Account</span>
-								</div>
-							</div>
-							<div class="bank-note">
-								<p><strong>Important Note:</strong> Please mention your name, contact number, and purpose of donation in the transaction remarks for proper acknowledgment.</p>
-							</div>
-						</div>
-					</div>
-
-					<!-- Tax Benefit Section -->
-					<div class="donation-tax-benefit">
-						<h2 class="vah-title">Tax Benefits</h2>
-						<div class="tax-benefit-card">
-							<div class="tax-icon">
-								<i class="mdi mdi-file-document"></i>
-							</div>
-							<div class="tax-content">
-								<h3>Income Tax Relief Under Section 80G</h3>
-								<p>All donations made to Shree Saraswati Shishu Mandir are eligible for income tax relief under Section 80G of the Income Tax Act. Donors can claim a deduction of 50% of the donation amount from their taxable income.</p>
-								<p>Upon receiving your donation, we will issue an official receipt that can be used for claiming tax benefits. Please ensure you provide your complete details including PAN number for tax purposes.</p>
-								<div class="tax-note">
-									<p><strong>Note:</strong> For donations exceeding ₹2,000, payment through cash is not eligible for tax benefits as per Income Tax rules. Please use bank transfer, check, or online payment methods.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Contact for Donation -->
-					<div class="donation-contact hide">
-						<h2 class="vah-title">Contact for Donation</h2>
-						<div class="donation-contact-card">
-							<p>For any queries regarding donations or to discuss specific donation opportunities, please contact:</p>
-							<div class="contact-details">
-								<div class="contact-person">
-									<i class="mdi mdi-account"></i>
-									<span>Mr. Rajesh Patel, Donation Coordinator</span>
-								</div>
-								<div class="contact-phone">
-									<i class="mdi mdi-phone"></i>
-									<span>+91 98765 43210</span>
-								</div>
-								<div class="contact-email">
-									<i class="mdi mdi-email"></i>
-									<span>donations@ssmgondal.org</span>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Donation CTA -->
-					<div class="donation-cta-section">
-						<h2>Ready to Make a Difference?</h2>
-						<p>Your contribution, no matter how small, can help shape the future of our students.</p>
-						<a href="#" class="donation-page-cta">Make a Donation Now</a>
+		<!-- Why Your Support Matters Section -->
+		<section class="vah-section donation-why-section">
+			<div class="vah-section-padding">
+				<h2 class="vah-heading">Why Your <strong class="vah-primary-clr">Support Matters</strong></h2>
+				<div class="donation-intro">
+					<p>At Shree Saraswati Shishu Mandir, we believe that quality education should be accessible to all deserving students. Your generous donations help us maintain and improve our educational facilities, and enhance the overall learning experience.</p>
+				</div>
+				<div class="separation-bar"></div>
+				
+				<!-- Donation Opportunities List -->
+				<div class="donation-opportunities">
+					<h3 class="vah-title">Donation Opportunities</h3>
+					<div class="donation-list-container">
+						<table class="donation-table">
+							<thead>
+								<tr>
+									<th>Facility</th>
+									<th>Amount</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Saraswati Shishu Mandir</td>
+									<td>₹51,00,000/-</td>
+								</tr>
+								<tr>
+									<td>Primary School</td>
+									<td>₹51,00,000/-</td>
+								</tr>
+								<tr>
+									<td>Secondary School</td>
+									<td>₹51,00,000/-</td>
+								</tr>
+								<tr>
+									<td>Prayer Hall</td>
+									<td>₹21,00,000/-</td>
+								</tr>
+								<tr>
+									<td>Physics Laboratory</td>
+									<td>₹7,00,000/-</td>
+								</tr>
+								<tr>
+									<td>Chemistry Laboratory</td>
+									<td>₹7,00,000/-</td>
+								</tr>
+								<tr>
+									<td>Biology Laboratory</td>
+									<td>₹7,00,000/-</td>
+								</tr>
+								<tr>
+									<td>Computer Laboratory 1</td>
+									<td>₹10,00,000/-</td>
+								</tr>
+								<tr>
+									<td>Computer Laboratory 2</td>
+									<td>₹10,00,000/-</td>
+								</tr>
+								<tr>
+									<td>Library</td>
+									<td>₹10,00,000/-</td>
+								</tr>
+								<tr>
+									<td>Yoga Class</td>
+									<td>₹5,00,000/-</td>
+								</tr>
+								<tr>
+									<td>Music Class</td>
+									<td>₹5,00,000/-</td>
+								</tr>
+								<tr>
+									<td>Indoor Game</td>
+									<td>₹5,00,000/-</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
 			</div>
 		</section>
 
+		<!-- Bank Details Section -->
+		<section class="vah-section donation-bank-section">
+			<div class="vah-section-padding container">
+				<h2 class="vah-heading">Bank <strong class="dark-title-highlight">Details</strong></h2>
+				<div class="bank-details-content">
+					<div class="bank-detail-row">
+						<span class="detail-label">Account Name:</span>
+						<span class="detail-value">
+							Shree Saraswati Shishu Mandir
+						</span>
+					</div>
+					<div class="bank-detail-row">
+						<span class="detail-label">Bank Name:</span>
+						<span class="detail-value">State Bank of India</span>
+					</div>
+					<div class="bank-detail-row">
+						<span class="detail-label">Branch:</span>
+						<span class="detail-value">Gondal, Gujarat</span>
+					</div>
+					<div class="bank-detail-row">
+						<span class="detail-label">Account Number:</span>
+						<span class="detail-value">12345678901234</span>
+					</div>
+					<div class="bank-detail-row">
+						<span class="detail-label">IFSC Code:</span>
+						<span class="detail-value">SBIN0001234</span>
+					</div>
+					<div class="bank-detail-row">
+						<span class="detail-label">Account Type:</span>
+						<span class="detail-value">Savings Account</span>
+					</div>
+				</div>
+			</div>
+		</section>
 
-		
+		<!-- Tax Benefits Section -->
+		<section class="vah-section donation-tax-section">
+			<div class="vah-section-padding container">
+				<h2 class="vah-heading">Tax <strong class="vah-primary-clr">Benefits</strong></h2>
+				<div class="tax-benefits-content">
+					<div class="tax-details">
+						<h3 class="vah-title">Income Tax Benefits Under Section 80G</h3>
+						<p>All donations to Shree Saraswati Shishu Mandir are eligible for tax exemption under Section 80G of the Income Tax Act. Our institution has been granted approval by the Income Tax Department, making your contributions eligible for tax deductions.</p>
+						
+						<div class="tax-benefits-highlights">
+							<div class="tax-highlight-item">
+								<div class="highlight-icon">
+									<i class="mdi mdi-percent"></i>
+								</div>
+								<div class="highlight-content">
+									<h4>50% Deduction</h4>
+									<p>Get 50% tax deduction on the donated amount from your taxable income</p>
+								</div>
+							</div>
+							
+							<div class="tax-highlight-item">
+								<div class="highlight-icon">
+									<i class="mdi mdi-receipt"></i>
+								</div>
+								<div class="highlight-content">
+									<h4>Official Receipt</h4>
+									<p>Receive an official 80G receipt for tax filing purposes</p>
+								</div>
+							</div>
+							
+							<div class="tax-highlight-item">
+								<div class="highlight-icon">
+									<i class="mdi mdi-currency-inr"></i>
+								</div>
+								<div class="highlight-content">
+									<h4>Any Amount</h4>
+									<p>Donations of any amount are eligible for tax benefits</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="tax-process">
+							<h4>How to Claim Tax Benefits:</h4>
+							<ol class="tax-process-steps">
+								<li>Make your donation to Shree Saraswati Shishu Mandir</li>
+								<li>Provide your PAN details and complete address</li>
+								<li>Receive the 80G certificate from us</li>
+								<li>Submit the certificate while filing your income tax return</li>
+								<li>Claim the deduction under Section 80G</li>
+							</ol>
+						</div>
+					</div>
+					<div class="tax-note">
+						<p><i class="mdi mdi-alert-circle-outline"></i> Please provide your PAN details and complete address to receive the tax exemption certificate. For any queries related to tax benefits, please contact our office.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<!-- Footer -->
 		<footer class="footer">
 			<div class="main-footer">
@@ -417,7 +365,7 @@
 					<div class="row gutters">
 						<!-- Footer Column 1: -->
 						<div class="col-ms-4 col-ss-6">
-							<h2 class="vah-logo">Affilieted with</h2>
+							<h2 class="vah-footer-title">Affilieted with</h2>
 							<div class="clearfix"></div><br />
 							<div class="flex">
 								<img class="logo vb" src="images/vidhya-bharti.png" alt="Vidya Bharti - Logo">
@@ -429,10 +377,14 @@
 							</div>
 		
 							<div class="vah-footer-social">
-								<i class="mdi mdi-facebook"></i>
-								<i class="mdi mdi-twitter"></i>
-								<i class="mdi mdi-google-plus"></i>
-								<i class="mdi mdi-linkedin"></i>
+								<a href="https://www.facebook.com/gondalshishumandir">
+									<i class="mdi mdi-facebook"></i>
+								</a>
+								<a href="https://www.instagram.com/explore/locations/609507425915338/shree-saraswati-shishu-mandir-gondal/">
+									<i class="mdi mdi-instagram"></i>
+								</a>
+								<!-- <i class="mdi mdi-google-plus"></i> -->
+								<!-- <i class="mdi mdi-linkedin"></i> -->
 							</div>
 						</div>
 						<!-- End Column 1 -->
@@ -465,7 +417,7 @@
 									</div>
 									<div class="col-ts-10">
 										<p class="vah-footer-lbl">
-											10, Station Plot, Station Rd Number 9, opp. S.P. Office, Devmata, Sation Plot, Bhaymath-2, Gondal, Gujarat 360311
+											10, Station Plot, opp. S.P. Office, Gondal, Gujarat 360311
 										</p>
 									</div>
 								</div>
@@ -476,7 +428,7 @@
 									</div>
 									<div class="col-ts-10">
 										<p class="vah-footer-lbl">
-											info@ssmgondal.org
+											gondalssmv@yahoo.in
 										</p>
 									</div>
 								</div>
@@ -494,6 +446,22 @@
 							</div>
 						</div>
 						<!-- End Footer Column 3 -->
+						<div class="visible-ts">
+							<div class="clearfix"></div><br />
+						</div>
+						<!-- Footer Column 4 -->
+						 <!--
+						<div class="col-ms-4 col-ss-6">
+							<h3 class="vah-footer-title">Stay Tuned</h3>
+							<p class="vah-footer-content">To keep updated about the latest news, subscribe to our newsletter.</p>
+							<div class="clearfix"></div><br />
+							<div class="vah-footer-subscribe">
+								<input type="text" placeholder="Enter Your Email">
+								<a><i class="mdi mdi-plane"></i>&nbsp;Subscribe!</a>
+							</div>
+						</div>
+						-->
+						<!-- End Footer Column 4 -->
 					</div>
 				</div>
 			</div>
@@ -504,12 +472,15 @@
 					<div class="row">
 						<div class="pull-left mob-f-none">
 							<!-- Copy right -->
-							<label class="vah-footer-lbl">&copy; 2016. All Rights Reserved.</label>
+							<label class="vah-footer-lbl">&copy; <span id="ssm-year"></span>. All Rights Reserved.</label>
 						</div>
 						<div class="pull-right mob-f-none">
 							<!-- Credit -->
-							<label class="vah-footer-lbl">Crafted with <strong><i class="mdi mdi-heart"></i> by BansariTech
-									:)</strong></label>
+							<label class="vah-footer-lbl">
+								Crafted with
+								<strong class="emoji"><i class="mdi mdi-heart"></i></strong>
+								by <strong class="dev-comp"><a href="https://bansaritech.in/">BansariTech</a></strong>
+							</label>
 						</div>
 					</div>
 				</div>
@@ -525,65 +496,6 @@
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/donation.js"></script>
 
-	<!-- Donation Modal -->
-	<div id="donation-modal" class="donation-modal">
-	    <div class="donation-modal-content">
-	        <span class="donation-modal-close">&times;</span>
-	        <h2>Make a Donation</h2>
-	        
-	        <form id="donation-form" class="donation-form">
-	            <div class="form-group">
-	                <label for="donor-name">Full Name*</label>
-	                <input type="text" id="donor-name" name="donor-name" required>
-	            </div>
-	            
-	            <div class="form-group">
-	                <label for="donor-email">Email Address*</label>
-	                <input type="email" id="donor-email" name="donor-email" required>
-	            </div>
-	            
-	            <div class="form-group">
-	                <label for="donor-phone">Phone Number*</label>
-	                <input type="tel" id="donor-phone" name="donor-phone" required>
-	            </div>
-	            
-	            <div class="form-group">
-	                <label for="donor-pan">PAN Number (for tax benefits)</label>
-	                <input type="text" id="donor-pan" name="donor-pan">
-	            </div>
-	            
-	            <div class="form-group">
-	                <label for="donation-category">Donation Category*</label>
-	                <select id="donation-category" name="donation-category" required>
-	                    <option value="">Select a category</option>
-	                    <option value="infrastructure">Infrastructure Development</option>
-	                    <option value="scholarship">Scholarship Fund</option>
-	                    <option value="technology">Technology Enhancement</option>
-	                    <option value="teacher">Teacher Development</option>
-	                    <option value="cultural">Cultural & Extracurricular</option>
-	                    <option value="general">General Fund</option>
-	                </select>
-	            </div>
-	            
-	            <div class="form-group">
-	                <label for="donation-amount">Donation Amount (₹)*</label>
-	                <input type="number" id="donation-amount" name="donation-amount" min="100" required>
-	            </div>
-	            
-	            <div class="form-group">
-	                <label for="donation-message">Message (Optional)</label>
-	                <textarea id="donation-message" name="donation-message" rows="3"></textarea>
-	            </div>
-	            
-	            <div class="form-group form-checkbox">
-	                <input type="checkbox" id="terms-agree" name="terms-agree" required>
-	                <label for="terms-agree">I agree to the terms and conditions</label>
-	            </div>
-	            
-	            <button type="submit" class="donation-submit-btn">Submit Donation</button>
-	        </form>
-	    </div>
-	</div>
 </body>
 </html>
 
