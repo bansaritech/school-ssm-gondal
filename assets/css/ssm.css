@@ -578,12 +578,13 @@ header.vah-header {
 .new-building-image img {
     width: 100%;
     border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
-    transition: transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
 }
 
 .new-building-image img:hover {
     transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
 }
 
 @media (max-width: 768px) {
@@ -1026,4 +1027,17 @@ header.vah-header {
 .cr-footer .vah-footer-lbl .emoji {
     font-size: 20px;
     color: var(--primary-orange-color);
+}
+
+.footer .main-footer .vah-footer-social i {
+    font-size: 30px;
+}
+
+.mdi-instagram {
+    background: radial-gradient(circle at 30% 107%,
+    #fdf497 0%, 
+    #fdf497 5%, 
+    #fd5949 45%, 
+    #d6249f 60%, 
+    #285AEB 90%);
 }
