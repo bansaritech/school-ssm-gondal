@@ -692,10 +692,10 @@
 .donation-table {
     /* width: 100%; */
     border-collapse: collapse;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.8);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
     border-radius: 10px;
     overflow: hidden;
-    outline: 3px solid #ddd;
+    /* outline: 3px solid #ddd; */
     margin: 20px auto;
 }
 
@@ -710,6 +710,10 @@
     font-weight: 600;
 }
 
+.donation-table tbody tr td.minor {
+    font-size: 14px;
+    color: #666;
+}
 .donation-table tbody tr {
     background-color: white;
     transition: all 0.3s ease;
