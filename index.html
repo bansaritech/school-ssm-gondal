@@ -29,6 +29,7 @@
         .launch-content {
             text-align: center;
             z-index: 2;
+            transition: all 0.5s ease;
         }
 
         .launch-content img {
@@ -143,6 +144,46 @@
     </style>
 </head>
 
+<style>
+    .corner-celebration {
+        position: fixed;
+        bottom: 0;
+        width: 50px;
+        height: 50px;
+        pointer-events: none;
+        z-index: 99;
+    }
+
+    .corner-celebration.left { left: 0; }
+    .corner-celebration.right { right: 0; }
+
+    .celebration-item {
+        position: absolute;
+        opacity: 0;
+        transform-origin: bottom center;
+    }
+
+    @keyframes shootUp {
+        0% { 
+            transform: translateY(0) rotate(0deg); 
+            opacity: 1;
+        }
+        100% { 
+            transform: translateY(-100vh) rotate(360deg); 
+            opacity: 0;
+        }
+    }
+
+    .celebration-item i {
+        font-size: 24px;
+        color: #f96f03;
+    }
+
+    .celebration-item.gold i { color: gold; }
+    .celebration-item.orange i { color: #f96f03; }
+    .celebration-item.white i { color: white; }
+</style>
+
 <body>
     <div class="launch-container">
         <div class="stars"></div>
@@ -155,6 +196,8 @@
             </button>
         </div>
         <div class="celebration-text">શ્રી ગણેશાય નમઃ</div>
+        <div class="corner-celebration left"></div>
+        <div class="corner-celebration right"></div>
     </div>
 
     <script>
@@ -177,16 +220,53 @@
             }
         }
 
-        function startCelebration() {
+        function createCornerCelebration() {
+            const icons = ['mdi-star', 'mdi-heart', 'mdi-flower', 'mdi-school', 'mdi-book-open-page-variant'];
+            const colors = ['gold', 'orange', 'white'];
+            
+            function shootFromCorner(corner) {
+                const item = document.createElement('div');
+                item.className = `celebration-item ${colors[Math.floor(Math.random() * colors.length)]}`;
+                
+                const icon = document.createElement('i');
+                icon.className = `mdi ${icons[Math.floor(Math.random() * icons.length)]}`;
+                item.appendChild(icon);
+                
+                const angle = corner === 'left' ? 
+                    Math.random() * 60 + 30 : // 30 to 90 degrees for left
+                    Math.random() * 60 + 90;  // 90 to 150 degrees for right
+                
+                const duration = 1 + Math.random() * 2;
+                
+                item.style.animation = `shootUp ${duration}s linear forwards`;
+                item.style.transform = `rotate(${angle}deg)`;
+                
+                document.querySelector(`.corner-celebration.${corner}`).appendChild(item);
+                
+                setTimeout(() => item.remove(), duration * 1000);
+            }
 
+            function startCornerCelebration() {
+                const corners = ['left', 'right'];
+                corners.forEach(corner => {
+                    const interval = setInterval(() => {
+                        shootFromCorner(corner);
+                    }, 200);
+
+                    // Stop after 4 seconds
+                    setTimeout(() => clearInterval(interval), 4000);
+                });
+            }
+
+            return startCornerCelebration;
+        }
+
+        function startCelebration() {
             // Remove button
             const button = document.querySelector('.launch-button');
-            // button.remove();
-
-            // remove existing content 
+            
+            // Remove existing content 
             const cnt = document.querySelector('.launch-content');
-            cnt.remove();
-
 
             button.style.pointerEvents = 'none';
             
@@ -204,11 +284,11 @@
             }, 100);
 
             // Create and animate confetti
-            for (let i = 0; i < 100; i++) {
+            for (let i = 0; i < 300; i++) {
                 createConfetti();
             }
 
-
+            setTimeout(() => cnt.remove(), 400);
             // Show celebration text
             const celebrationText = document.querySelector('.celebration-text');
             setTimeout(() => {
@@ -228,7 +308,7 @@
             confetti.className = 'confetti';
             confetti.style.left = Math.random() * window.innerWidth + 'px';
             confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-            confetti.style.animation = `confettiFall ${1 + Math.random() * 2}s linear forwards`;
+            confetti.style.animation = `confettiFall ${1 + Math.random() * 2}s ease-out forwards`;
             document.body.appendChild(confetti);
             
             // Remove confetti after animation
